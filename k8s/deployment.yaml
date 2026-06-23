@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: questlytales-backend
+  labels:
+    app: questlytales-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: questlytales-backend
+  template:
+    metadata:
+      labels:
+        app: questlytales-backend
+    spec:
+      containers:
+        - name: questlytales-backend
+          image: 10.0.0.10:5000/questlytales-backend:latest
+          ports:
+            - containerPort: 8080
+          env:
+            # Config non sensible uniquement.
+            - name: STORY_GENERATOR
+              value: "claude"
+          # Tous les secrets (MONGO_URI_QUESTLYTALES, MONGO_URI_USERS_QUESTLYTALES,
+          # JWT_SECRET_QUESTLYTALES, QUESTLYTALES_GITHUB_TOKEN, DEEPSEEK_API_KEY,
+          # ANTHROPIC_API_KEY) sont provisionnés dans le Secret questlytales-secrets
+          # par le pipeline Jenkins.
+          envFrom:
+            - secretRef:
+                name: questlytales-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: questlytales-backend
+spec:
+  type: NodePort
+  selector:
+    app: questlytales-backend
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080

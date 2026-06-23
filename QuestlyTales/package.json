@@ -1,0 +1,17 @@
+{
+  "name": "questlytales-api-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests d'intégration API (Newman) pour QuestlyTales",
+  "scripts": {
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "app:test": "./mvnw spring-boot:run -Dspring-boot.run.arguments=\"--spring.data.mongodb.uri=mongodb://root:root@localhost:27017/questlytales_test?authSource=admin --spring.data.mongodb.uri.users=mongodb://root:root@localhost:27017/users?authSource=admin\"",
+    "test": "newman run tests/questlytales.postman_collection.json -e tests/local.postman_environment.json",
+    "test:report": "newman run tests/questlytales.postman_collection.json -e tests/local.postman_environment.json -r cli,htmlextra"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}

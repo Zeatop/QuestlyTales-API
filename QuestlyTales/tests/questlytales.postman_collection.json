@@ -1,0 +1,508 @@
+{
+  "info": {
+    "name": "QuestlyTales API (A-D)",
+    "description": "Tests d'intégration Newman : Auth (A), DataTypes (B), Stories CRUD (C), Sécurité/erreurs (D). N'inclut PAS la génération IA (vérifiée à la main via le front).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "email", "value": "newman@questly.dev" },
+    { "key": "password", "value": "newman1234" },
+    { "key": "token", "value": "" },
+    { "key": "storyId", "value": "" },
+    { "key": "dtype", "value": "" },
+    { "key": "vtype", "value": "" },
+    { "key": "vaction", "value": "" },
+    { "key": "vfound", "value": "0" }
+  ],
+  "item": [
+    {
+      "name": "A. Auth",
+      "item": [
+        {
+          "name": "Register (toléré si déjà créé)",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "noauth" },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/auth/register", "host": ["{{baseUrl}}"], "path": ["api", "auth", "register"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Newman\",\n  \"prenom\": \"Test\",\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('register: 201 (créé) ou 400 (déjà existant)', function () {",
+                  "  pm.expect([201, 400]).to.include(pm.response.code);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login -> token",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "noauth" },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('login 200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('token présent', function () { pm.expect(j.token).to.be.a('string').and.to.not.be.empty; });",
+                  "pm.collectionVariables.set('token', j.token);"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B. DataTypes",
+      "item": [
+        {
+          "name": "GET /api/datatypes",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes", "host": ["{{baseUrl}}"], "path": ["api", "datatypes"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var arr = pm.response.json();",
+                  "pm.test('liste de types non vide', function () { pm.expect(arr).to.be.an('array').that.is.not.empty; });",
+                  "pm.collectionVariables.set('dtype', arr[0]);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/details",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/details", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "details"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var arr = pm.response.json();",
+                  "pm.test('détails: tableau avec typeName + allowedActions', function () {",
+                  "  pm.expect(arr).to.be.an('array').that.is.not.empty;",
+                  "  pm.expect(arr[0]).to.have.property('typeName');",
+                  "  pm.expect(arr[0]).to.have.property('allowedActions');",
+                  "});",
+                  "// Choisit un couple (type, action) réellement valide pour le test de validation",
+                  "var found = false;",
+                  "for (var i = 0; i < arr.length; i++) {",
+                  "  if (arr[i].allowedActions && arr[i].allowedActions.length > 0) {",
+                  "    pm.collectionVariables.set('vtype', arr[i].typeName);",
+                  "    pm.collectionVariables.set('vaction', arr[i].allowedActions[0]);",
+                  "    found = true; break;",
+                  "  }",
+                  "}",
+                  "pm.collectionVariables.set('vfound', found ? '1' : '0');",
+                  "if (!found) {",
+                  "  pm.collectionVariables.set('vtype', pm.collectionVariables.get('dtype') || 'Int');",
+                  "  pm.collectionVariables.set('vaction', '__none__');",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/{type}",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/{{dtype}}", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "{{dtype}}"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('typeName correspond', function () { pm.expect(j.typeName).to.eql(pm.collectionVariables.get('dtype')); });",
+                  "pm.test('a allowedActions', function () { pm.expect(j).to.have.property('allowedActions'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/{type}/actions",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/{{dtype}}/actions", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "{{dtype}}", "actions"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('liste d actions (tableau)', function () { pm.expect(pm.response.json()).to.be.an('array'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/{type}/validate/{action}",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/{{vtype}}/validate/{{vaction}}", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "{{vtype}}", "validate", "{{vaction}}"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('champ valid booléen', function () { pm.expect(j.valid).to.be.a('boolean'); });",
+                  "if (pm.collectionVariables.get('vfound') === '1') {",
+                  "  pm.test('une action réelle du type est valide', function () { pm.expect(j.valid).to.be.true; });",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/count",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/count", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "count"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('count > 0', function () { pm.expect(pm.response.json().count).to.be.above(0); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/datatypes/{inexistant} -> 404",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/datatypes/__type_inexistant__", "host": ["{{baseUrl}}"], "path": ["api", "datatypes", "__type_inexistant__"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('type inconnu -> 404', function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C. Stories CRUD",
+      "item": [
+        {
+          "name": "POST /api/stories (création)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/stories", "host": ["{{baseUrl}}"], "path": ["api", "stories"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metadata\": { \"title\": \"Newman Test Story\", \"description\": \"Histoire de test Newman\", \"version\": \"1.0\", \"tags\": [] },\n  \"nodes\": [\n    { \"id\": 0, \"actions\": [{ \"type\": \"ShowDialog\", \"params\": { \"speaker\": \"Narrateur\", \"value\": \"Debut\" } }], \"choices\": [{ \"choiceText\": \"Continuer\", \"conditions\": [], \"actions\": [], \"nextNodeId\": 1 }], \"x\": 0, \"y\": 0, \"color\": \"#4A90D9\" },\n    { \"id\": 1, \"actions\": [{ \"type\": \"ShowDialog\", \"params\": { \"speaker\": \"Narrateur\", \"value\": \"Fin\" } }], \"choices\": [], \"x\": 300, \"y\": 0, \"color\": \"#E74C3C\" }\n  ],\n  \"attributes\": [],\n  \"images\": [],\n  \"videos\": [],\n  \"sounds\": []\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('201 créé', function () { pm.response.to.have.status(201); });",
+                  "var j = pm.response.json();",
+                  "pm.test('success + storyId', function () {",
+                  "  pm.expect(j.success).to.be.true;",
+                  "  pm.expect(j.storyId).to.be.a('string').and.to.not.be.empty;",
+                  "});",
+                  "pm.collectionVariables.set('storyId', j.storyId);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/stories (preview only)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/stories?page=0&size=12", "host": ["{{baseUrl}}"], "path": ["api", "stories"], "query": [{ "key": "page", "value": "0" }, { "key": "size", "value": "12" }] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('enveloppe paginée', function () {",
+                  "  pm.expect(j).to.have.property('content');",
+                  "  pm.expect(j).to.have.property('totalElements');",
+                  "});",
+                  "pm.test('items = preview (métadonnées, PAS de nodes)', function () {",
+                  "  if (j.content.length > 0) {",
+                  "    pm.expect(j.content[0]).to.have.property('metadata');",
+                  "    pm.expect(j.content[0]).to.not.have.property('nodes');",
+                  "  }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/stories/mine",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/stories/mine?page=0&size=12", "host": ["{{baseUrl}}"], "path": ["api", "stories", "mine"], "query": [{ "key": "page", "value": "0" }, { "key": "size", "value": "12" }] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('enveloppe paginée', function () { pm.expect(pm.response.json()).to.have.property('content'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/stories/{id}/edit (complet)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/stories/{{storyId}}/edit", "host": ["{{baseUrl}}"], "path": ["api", "stories", "{{storyId}}", "edit"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('contenu complet (nodes présents)', function () {",
+                  "  pm.expect(j).to.have.property('nodes');",
+                  "  pm.expect(j.nodes).to.be.an('array').that.is.not.empty;",
+                  "});",
+                  "pm.test('métadonnées', function () { pm.expect(j.metadata.title).to.eql('Newman Test Story'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/stories/{id}/play (graphe jouable)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/stories/{{storyId}}/play", "host": ["{{baseUrl}}"], "path": ["api", "stories", "{{storyId}}", "play"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "var j = pm.response.json();",
+                  "pm.test('graphe + startNodeId', function () {",
+                  "  pm.expect(j).to.have.property('nodes');",
+                  "  pm.expect(j).to.have.property('startNodeId');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "PUT /api/stories/{id} (mise à jour)",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/stories/{{storyId}}", "host": ["{{baseUrl}}"], "path": ["api", "stories", "{{storyId}}"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metadata\": { \"title\": \"Newman Test Story (maj)\", \"description\": \"Mise a jour\", \"version\": \"1.1\", \"tags\": [] },\n  \"nodes\": [\n    { \"id\": 0, \"actions\": [{ \"type\": \"ShowDialog\", \"params\": { \"speaker\": \"Narrateur\", \"value\": \"Debut maj\" } }], \"choices\": [{ \"choiceText\": \"Continuer\", \"conditions\": [], \"actions\": [], \"nextNodeId\": 1 }], \"x\": 0, \"y\": 0, \"color\": \"#4A90D9\" },\n    { \"id\": 1, \"actions\": [], \"choices\": [], \"x\": 300, \"y\": 0, \"color\": \"#E74C3C\" }\n  ],\n  \"attributes\": [],\n  \"images\": [],\n  \"videos\": [],\n  \"sounds\": []\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('success', function () { pm.expect(pm.response.json().success).to.be.true; });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DELETE /api/stories/{id}",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/stories/{{storyId}}", "host": ["{{baseUrl}}"], "path": ["api", "stories", "{{storyId}}"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('200', function () { pm.response.to.have.status(200); });",
+                  "pm.test('success', function () { pm.expect(pm.response.json().success).to.be.true; });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/stories/{id}/edit après suppression -> 404",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/stories/{{storyId}}/edit", "host": ["{{baseUrl}}"], "path": ["api", "stories", "{{storyId}}", "edit"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('histoire supprimée -> 404', function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D. Sécurité / erreurs",
+      "item": [
+        {
+          "name": "POST /generate sans token -> 401/403",
+          "request": {
+            "method": "POST",
+            "auth": { "type": "noauth" },
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/stories/generate", "host": ["{{baseUrl}}"], "path": ["api", "stories", "generate"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"minNodeCount\": 5,\n  \"existingStory\": { \"metadata\": { \"description\": \"x\" }, \"attributes\": [{ \"label\": \"characters\", \"type\": \"LIST_STRING\", \"value\": \"A\" }] }\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('non authentifié -> 401 ou 403', function () { pm.expect([401, 403]).to.include(pm.response.code); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /mine sans token -> 401/403",
+          "request": {
+            "method": "GET",
+            "auth": { "type": "noauth" },
+            "url": { "raw": "{{baseUrl}}/api/stories/mine", "host": ["{{baseUrl}}"], "path": ["api", "stories", "mine"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('non authentifié -> 401 ou 403', function () { pm.expect([401, 403]).to.include(pm.response.code); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /generate body invalide (sans minNodeCount) -> 400",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/stories/generate", "host": ["{{baseUrl}}"], "path": ["api", "stories", "generate"] },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"existingStory\": { \"metadata\": { \"description\": \"x\" }, \"attributes\": [{ \"label\": \"characters\", \"type\": \"LIST_STRING\", \"value\": \"A\" }] }\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('body invalide -> 400', function () { pm.response.to.have.status(400); });",
+                  "pm.test('message d erreur', function () { pm.expect(pm.response.json().success).to.be.false; });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

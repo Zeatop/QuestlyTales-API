@@ -1,0 +1,32 @@
+services:
+  backend:
+    build: .
+    container_name: questlytales-backend
+    restart: "no"
+    ports:
+      - "8080:8080"
+    environment:
+      MONGO_URI: mongodb://root:root@mongodb:27017/questlytales?authSource=admin
+      MONGO_URI_USERS: mongodb://root:root@mongodb:27017/questlytales?authSource=admin
+      # Secrets à fournir (via un .env ou l'environnement hôte) :
+      JWT_SECRET: ${JWT_SECRET:-}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      STORY_GENERATOR: ${STORY_GENERATOR:-deepseek}
+    depends_on:
+      - mongodb
+
+  mongodb:
+    # Mongo pour les tests : pas de volume nommé persistant. L'image mongo:7 crée
+    # des volumes anonymes pour /data/db ; à supprimer au besoin via Docker Desktop
+    # (ou `docker compose down -v`).
+    image: mongo:7
+    container_name: local-mongodb
+    restart: "no"
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: users

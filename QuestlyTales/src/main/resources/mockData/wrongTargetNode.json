@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Test nœud cible invalide",
+    "author": "Tester",
+    "version": "1.0",
+    "language": "fr",
+    "creationDate": 1730937600000,
+    "lastUpdateDate": 1730937600000,
+    "description": "Story pour tester un nextNodeId qui n'existe pas",
+    "tags": ["test"],
+    "thumbnailImage": null,
+    "genre": "Other",
+    "size": 1,
+    "numberOfNodes": 1
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Nœud avec un nextNodeId inexistant"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Aller vers un nœud inexistant",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 999
+        }
+      ],
+      "x": 100,
+      "y": 100,
+      "color": "#0000FF"
+    }
+  ],
+  "attributes": [],
+  "images": [],
+  "videos": [],
+  "sounds": []
+}

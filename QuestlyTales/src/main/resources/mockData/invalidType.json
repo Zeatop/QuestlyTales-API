@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Test attribut invalide",
+    "author": "Tester",
+    "version": "1.0",
+    "language": "fr",
+    "creationDate": 1730937600000,
+    "lastUpdateDate": 1730937600000,
+    "description": "Story avec un type d'attribut non supporté",
+    "tags": ["test"],
+    "thumbnailImage": null,
+    "genre": "Other",
+    "size": 1,
+    "numberOfNodes": 1
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Début"
+          }
+        }
+      ],
+      "choices": [],
+      "x": 100,
+      "y": 100,
+      "color": "#00FF00"
+    }
+  ],
+  "attributes": [
+    {
+      "label": "score",
+      "type": "invalidType",
+      "value": "0"
+    }
+  ],
+  "images": [],
+  "videos": [],
+  "sounds": []
+}

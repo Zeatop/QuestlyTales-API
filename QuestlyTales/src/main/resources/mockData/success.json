@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "title": "La Légende du Cristal Oublié",
+    "author": "QuestlyTales",
+    "version": "1.0",
+    "language": "fr",
+    "creationDate": 1730937600000,
+    "lastUpdateDate": 1730937600000,
+    "description": "Une aventure mystique où vous devez retrouver un artefact ancien caché dans les profondeurs d'un temple abandonné",
+    "tags": ["aventure", "mystique", "temple"],
+    "thumbnailImage": "crystal-temple.jpg",
+    "genre": "Adventure",
+    "size": 9,
+    "numberOfNodes": 9
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "temple-entrance.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Vous vous tenez devant l'entrée sombre du temple. Des inscriptions anciennes couvrent les murs de pierre. Une torche brûle faiblement à l'entrée."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Entrer dans le temple avec prudence",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        },
+        {
+          "choiceText": "Examiner les inscriptions avant d'entrer",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 2
+        }
+      ],
+      "x": 100,
+      "y": 200,
+      "color": "#4CAF50"
+    },
+    {
+      "id": 1,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "corridor.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Un long couloir s'étend devant vous. Vous entendez un bruit d'eau qui coule au loin. Deux portes se dressent de chaque côté."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Prendre la porte de gauche",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 3
+        },
+        {
+          "choiceText": "Prendre la porte de droite",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 4
+        },
+        {
+          "choiceText": "Continuer tout droit",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 6
+        }
+      ],
+      "x": 300,
+      "y": 200,
+      "color": "#2196F3"
+    },
+    {
+      "id": 2,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "inscriptions.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Les inscriptions révèlent une énigme ancienne : 'Seul celui qui possède la clé de sagesse pourra atteindre le cristal.' Vous remarquez une petite niche dans le mur."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Fouiller la niche",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 5
+        },
+        {
+          "choiceText": "Entrer dans le temple",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        }
+      ],
+      "x": 100,
+      "y": 400,
+      "color": "#FFC107"
+    },
+    {
+      "id": 3,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "trap-room.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Une salle remplie de pièges anciens. Des flèches jaillissent des murs !"
+          }
+        }
+      ],
+      "choices": [],
+      "x": 500,
+      "y": 100,
+      "color": "#F44336"
+    },
+    {
+      "id": 4,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "library.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Une bibliothèque poussiéreuse contenant d'anciens grimoires. Vous pourriez y trouver des informations utiles."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Lire les grimoires",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 7
+        },
+        {
+          "choiceText": "Retourner dans le corridor",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        }
+      ],
+      "x": 500,
+      "y": 300,
+      "color": "#9C27B0"
+    },
+    {
+      "id": 5,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "golden-key.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Vous trouvez une clé dorée dans la niche ! Elle semble ancienne mais bien préservée."
+          }
+        },
+        {
+          "type": "update_attribute",
+          "params": { "attributeName": "hasKey", "value": "true" }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Prendre la clé et entrer dans le temple",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        }
+      ],
+      "x": 300,
+      "y": 400,
+      "color": "#FF9800"
+    },
+    {
+      "id": 6,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "ornate-door.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Vous atteignez une grande porte ornée. Elle nécessite une clé pour s'ouvrir."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Utiliser la clé dorée",
+          "conditions": [
+            {
+              "type": "check_attribute",
+              "params": { "attributeName": "hasKey", "value": "true" }
+            }
+          ],
+          "actions": [],
+          "nextNodeId": 8
+        },
+        {
+          "choiceText": "Retourner en arrière",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        }
+      ],
+      "x": 500,
+      "y": 500,
+      "color": "#795548"
+    },
+    {
+      "id": 7,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "old-book.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Les grimoires parlent du cristal et de sa localisation dans la chambre souterraine."
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Continuer l'exploration",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 6
+        }
+      ],
+      "x": 700,
+      "y": 300,
+      "color": "#673AB7"
+    },
+    {
+      "id": 8,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": { "imagePath": "crystal-chamber.jpg" }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": null,
+            "style": null,
+            "text": "Vous entrez dans une salle magnifique où le Cristal Oublié brille de mille feux sur un piédestal. Félicitations, vous avez réussi votre quête !"
+          }
+        }
+      ],
+      "choices": [],
+      "x": 700,
+      "y": 500,
+      "color": "#00BCD4"
+    }
+  ],
+  "attributes": [
+    {
+      "label": "characters",
+      "type": "LIST_STRING",
+      "value": "Explorateur (protagoniste)"
+    },
+    {
+      "label": "health",
+      "type": "INT",
+      "value": "100"
+    },
+    {
+      "label": "hasKey",
+      "type": "STRING",
+      "value": "false"
+    }
+  ],
+  "images": ["temple-entrance.jpg", "corridor.jpg", "inscriptions.jpg", "trap-room.jpg", "library.jpg", "golden-key.jpg", "ornate-door.jpg", "old-book.jpg", "crystal-chamber.jpg"],
+  "videos": [],
+  "sounds": []
+}

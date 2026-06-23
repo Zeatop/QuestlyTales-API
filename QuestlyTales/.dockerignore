@@ -1,0 +1,13 @@
+target/
+node_modules/
+.idea/
+.vscode/
+.git/
+.gitignore
+.gitattributes
+*.md
+tests/
+scripts/
+package.json
+package-lock.json
+src/main/resources/application-local.properties

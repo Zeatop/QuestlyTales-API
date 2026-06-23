@@ -1,0 +1,30 @@
+# Modèle de configuration locale (secrets).
+# Copier ce fichier en `application-local.properties` (ignoré par git) et y
+# mettre tes vraies valeurs, puis lancer l'appli avec le profil `local` :
+#
+#   cp src/main/resources/application-local.properties.example \
+#      src/main/resources/application-local.properties
+#   mvn spring-boot:run -Dspring-boot.run.profiles=local
+#
+# Ces clés surchargent celles de application.properties.
+
+# --- GitHub (DataTypeRegistry / ActionRegistry) ---
+github.token=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# --- DeepSeek (génération d'histoires) ---
+deepseek.api.key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# --- Claude / Anthropic (génération d'histoires) ---
+# Mettre story.generator=claude pour utiliser Claude à la place de DeepSeek.
+anthropic.api.key=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#story.generator=claude
+#anthropic.model=claude-opus-4-8
+#anthropic.structure.refinement-passes=2
+
+# --- MongoDB (correspond au docker-compose local) ---
+spring.data.mongodb.uri=mongodb://root:root@localhost:27017/questlytales?authSource=admin
+spring.data.mongodb.uri.users=mongodb://root:root@localhost:27017/questlytales?authSource=admin
+
+# --- JWT (génère une clé Base64 256 bits : openssl rand -base64 32) ---
+jwt.secret=HsMWMWKExJcjwKbJuTD0DpWN95KBEGsAZA6Zp24axzM=
+jwt.expiration=86400000

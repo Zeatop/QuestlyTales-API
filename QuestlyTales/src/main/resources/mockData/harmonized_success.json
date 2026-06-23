@@ -1,0 +1,192 @@
+{
+  "id": 666,
+  "metadata": {
+    "title": "The test",
+    "author": "TheWhyap",
+    "version": "1.0",
+    "language": "fr",
+    "creationDate": 1730937600000,
+    "lastUpdateDate": 1733616000000,
+    "description": "This is a test.",
+    "tags": [
+      "test",
+      "not a story"
+    ],
+    "thumbnailImage": "example",
+    "genre": "Other",
+    "size": 12,
+    "numberOfNodes": 14
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "actions": [
+        {
+          "type": "change_path",
+          "params": {
+            "imagePath": "example"
+          }
+        },
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": "Tester",
+            "style": null,
+            "text": "Do you want to change testing level ?"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Set testing level to 2",
+          "conditions": [],
+          "actions": [
+            {
+              "type": "update_attribute",
+              "params": {
+                "attributeName": "Testing level",
+                "value": "2"
+              }
+            }
+          ],
+          "nextNodeId": 1
+        },
+        {
+          "choiceText": "Don't",
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": "Tester",
+            "style": null,
+            "text": "So the testing level is now ${Testing level} !"
+          }
+        },
+        {
+          "type": "update_attribute",
+          "params": {
+            "attributeName": "name",
+            "value": "TheWhyap"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": "Test 1",
+          "conditions": [
+            {
+              "type": "check_attribute",
+              "params": {
+                "attributeName": "Testing level",
+                "value": "1"
+              }
+            }
+          ],
+          "actions": [],
+          "nextNodeId": 2
+        },
+        {
+          "choiceText": "Test 2",
+          "conditions": [
+            {
+              "type": "check_attribute",
+              "params": {
+                "attributeName": "Testing level",
+                "value": "2"
+              }
+            }
+          ],
+          "actions": [],
+          "nextNodeId": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": "${name}",
+            "style": null,
+            "text": "Still testing (nodeId: 2) !"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": null,
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": "${name}",
+            "style": null,
+            "text": "Still testing (nodeId: 3) !"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "choiceText": null,
+          "conditions": [],
+          "actions": [],
+          "nextNodeId": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "actions": [
+        {
+          "type": "show_dialog",
+          "params": {
+            "speaker": "${name}",
+            "style": null,
+            "text": "The end !"
+          }
+        }
+      ],
+      "choices": []
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Testing level",
+      "type": "INT",
+      "value": "1"
+    },
+    {
+      "label": "name",
+      "type": "STRING",
+      "value": ""
+    },
+    {
+      "label": "inventory",
+      "type": "LIST_STRING",
+      "value": "TODO"
+    }
+  ],
+  "images": ["example.png", "example2.png"],
+  "videos": [],
+  "sounds": []
+}
+
+# Choices sans suite = fin
+# Liste des images/videos/sounds à générer par le front

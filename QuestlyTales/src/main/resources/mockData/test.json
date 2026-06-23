@@ -1,0 +1,3591 @@
+{
+    "metadata": {
+        "title": "Les Racines de la Haine",
+        "description": "Un homme, influencé par son entourage et ses frustrations, glisse progressivement vers le racisme. Ses choix détermineront s'il sombre dans la violence ou trouve la rédemption.",
+        "author": null,
+        "version": "1.0",
+        "language": null,
+        "creationDate": null,
+        "lastUpdateDate": null,
+        "tags": [],
+        "thumbnailImage": null,
+        "genre": null,
+        "size": 126,
+        "numberOfNodes": 126
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le café est vide. Thomas fixe son reflet dans la vitre. Dehors, un groupe d'hommes rit fort. L'un d'eux porte un insigne qu'il connaît trop bien."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Attendre qu'ils partent",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 1
+                },
+                {
+                    "choiceText": "Sortir les affronter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 2
+                }
+            ],
+            "x": 0,
+            "y": 0,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 1,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Les minutes s'étirent. Le rire des hommes résonne encore. Tu sens la colère monter, mais tu restes assis."
+                    }
+                },
+                {
+                    "type": "Increase",
+                    "params": {
+                        "attr": "ressentiment",
+                        "value": 1
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Boire un autre café et oublier",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 3
+                },
+                {
+                    "choiceText": "Les observer en silence, notant leurs visages",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 4
+                }
+            ],
+            "x": 300,
+            "y": 0,
+            "color": "#27AE60"
+        },
+        {
+            "id": 2,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu pousses la porte. Le froid te frappe. Les hommes se tournent vers toi, leurs sourires s'effacent."
+                    }
+                },
+                {
+                    "type": "Increase",
+                    "params": {
+                        "attr": "agressivite",
+                        "value": 1
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les défier du regard",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 5
+                },
+                {
+                    "choiceText": "Cracher par terre et passer ton chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 6
+                }
+            ],
+            "x": 600,
+            "y": 0,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 3,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Julien",
+                        "value": "Mon père a raison, ces gens-là nous volent notre travail. Mais au fond, est-ce que ce n'est pas moi qui ai échoué ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Accepter le discours paternel pour apaiser la tension",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 7
+                },
+                {
+                    "choiceText": "Remettre en question les paroles de mon père",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 8
+                }
+            ],
+            "x": 900,
+            "y": 0,
+            "color": "#E67E22"
+        },
+        {
+            "id": 4,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Tu vois ce quartier ? Ce sont eux qui amènent la violence. Faut pas être naïve, Julien."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Acquiescer pour éviter le conflit",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 8
+                },
+                {
+                    "choiceText": "Affirmer que la violence n'a pas de couleur de peau",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 9
+                }
+            ],
+            "x": 1200,
+            "y": 0,
+            "color": "#16A085"
+        },
+        {
+            "id": 5,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Julien",
+                        "value": "Je me sens prisonnier de ces idées qui m'envahissent. Pourtant, une petite voix me dit que ce n'est pas la voie."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Écouter cette voix et chercher à comprendre l'autre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 10
+                },
+                {
+                    "choiceText": "La faire taire et plonger plus profond dans la haine",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 11
+                }
+            ],
+            "x": 1500,
+            "y": 0,
+            "color": "#2980B9"
+        },
+        {
+            "id": 6,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans l'impasse, une voix s'élève derrière toi : 'T'as besoin d'aide, mon frère ?' C'est Karim, ton collègue que tu évites depuis des semaines."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Accepter son aide, laisser une chance à la main tendue",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 11
+                },
+                {
+                    "choiceText": "Le repousser violemment, hurler qu'il ne comprend rien",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 12
+                }
+            ],
+            "x": 1800,
+            "y": 0,
+            "color": "#D35400"
+        },
+        {
+            "id": 7,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant le bar, un groupe d'hommes ricane en désignant un passant. L'un d'eux, un habitué, t'attire d'un geste : 'Viens, on va s'amuser un peu.'"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les rejoindre, rire avec eux pour ne pas être la cible",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 13
+                },
+                {
+                    "choiceText": "Faire demi-tour, refuser de participer à ce jeu malsain",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 14
+                }
+            ],
+            "x": 2100,
+            "y": 0,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 8,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Seul dans ta chambre, tu fixes la photo de ta mère. Elle t'a toujours dit : 'Ne juge pas un homme à sa peau, mais à son cœur.' Sa voix résonne dans ta tête."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Déchirer la photo, enterrer ses leçons avec ta colère",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 14
+                },
+                {
+                    "choiceText": "La garder près de toi, laisser une lueur d'espoir survivre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 15
+                }
+            ],
+            "x": 2400,
+            "y": 0,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 9,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le camp d'entraînement est une fournaise. Les insultes fusaient déjà ce matin. Ton ami te tend une brassard, un symbole que tu n'as jamais porté."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre le brassard et rejoindre le groupe",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 15
+                },
+                {
+                    "choiceText": "Refuser, mais rester silencieux",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 16
+                }
+            ],
+            "x": 2700,
+            "y": 0,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 10,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La réunion clandestine bat son plein. Des discours enflammés, des promesses de revanche. L'un des leaders te fixe droit dans les yeux."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Applaudir et crier avec la foule",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 17
+                },
+                {
+                    "choiceText": "Quitter discrètement la salle",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 18
+                }
+            ],
+            "x": 3000,
+            "y": 0,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 11,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Seul dans la nuit, le visage de ta mère te hante. Son regard mêlé de peur et de honte. Tu sais que demain tu dois choisir ton camp."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Chercher du réconfort auprès de ton groupe",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 18
+                },
+                {
+                    "choiceText": "T'éloigner, marcher vers l'inconnu",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 19
+                }
+            ],
+            "x": 3300,
+            "y": 0,
+            "color": "#27AE60"
+        },
+        {
+            "id": 12,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le miroir du hall te renvoie ton regard. Derrière toi, Sophie te dit : 'Tu n'es plus le même.' Sa voix tremble. Chaque mot est une accusation."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Te retourner et la confronter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 19
+                },
+                {
+                    "choiceText": "Quitter la pièce sans un mot",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 20
+                }
+            ],
+            "x": 0,
+            "y": 250,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 13,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le café est bondé. Marcus, ton ancien collègue, t'aperçoit et hésite. Il sait. Tu vois la peur dans ses yeux. La serveuse attend ta commande."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Aller t'asseoir à côté de lui",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 21
+                },
+                {
+                    "choiceText": "Faire semblant de ne pas le voir et commander rapidement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 22
+                }
+            ],
+            "x": 300,
+            "y": 250,
+            "color": "#E67E22"
+        },
+        {
+            "id": 14,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La pluie frappe le bitume. Un groupe de jeunes passe en riant. L'un d'eux te frôle l'épaule. Sous ta veste, ta main se crispe sur la poignée du couteau."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les suivre dans la rue",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 22
+                },
+                {
+                    "choiceText": "Rentrer chez toi immédiatement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 23
+                }
+            ],
+            "x": 600,
+            "y": 250,
+            "color": "#16A085"
+        },
+        {
+            "id": 15,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "L'inconnu s'approche de toi, une lueur de défi dans les yeux. 'Tu n'es pas d'ici, n'est-ce pas?' Sa voix est calme, mais chaque mot est un coup de poing."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lui répondre avec colère",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 23
+                },
+                {
+                    "choiceText": "Rester silencieux et l'observer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 24
+                }
+            ],
+            "x": 900,
+            "y": 250,
+            "color": "#2980B9"
+        },
+        {
+            "id": 16,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le groupe d'hommes rit bruyamment derrière toi. L'un d'eux te bouscule délibérément en passant. L'humiliation est un poison qui brûle en toi."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Te retourner et les confronter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 24
+                },
+                {
+                    "choiceText": "Serre les poings et t'éloigner",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 25
+                }
+            ],
+            "x": 1200,
+            "y": 250,
+            "color": "#D35400"
+        },
+        {
+            "id": 17,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans l'ombre du bar, tu vois un homme seul. Ses yeux croisent les tiens. Il hoche la tête, comme s'il te connaissait. Une opportunité ou un piège?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Aller vers lui",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 26
+                },
+                {
+                    "choiceText": "Faire semblant de ne pas le voir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 27
+                }
+            ],
+            "x": 1500,
+            "y": 250,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 18,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans l'usine, les regards se font plus lourds. Un collègue d'origine étrangère est promu à ta place. La rage monte."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Collègue raciste",
+                        "value": "Tu vois ? Ils prennent nos postes. Tu vas laisser faire ça ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Exploser de colère et insulter le promu",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 27
+                },
+                {
+                    "choiceText": "Garder le silence, mais nourrir la rancœur",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 28
+                }
+            ],
+            "x": 1800,
+            "y": 250,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 19,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le soir, ta sœur t'appelle, inquiète. Elle a entendu parler de tes fréquentations."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Sœur",
+                        "value": "Je ne te reconnais plus. Qu'est-ce qui t'arrive ? Tu n'étais pas comme ça avant."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "T'en prendre à elle, lui dire qu'elle ne comprend pas",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 28
+                },
+                {
+                    "choiceText": "Reconnaître tes doutes, lui confier ta colère",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 29
+                }
+            ],
+            "x": 2100,
+            "y": 250,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 20,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Un inconnu te tend un flyer dans la rue. Un groupe extrémiste recrute. La tentation de passer à l'action est forte."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Recruteur",
+                        "value": "Rejoins-nous. Ensemble, nous pouvons reprendre ce qui nous appartient."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre le flyer et accepter un rendez-vous",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 29
+                },
+                {
+                    "choiceText": "Refuser et jeter le flyer, mais la haine reste",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 30
+                }
+            ],
+            "x": 2400,
+            "y": 250,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 21,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Sous le lampadaire du parking, un groupe échange des rires gras. L'un d'eux montre du doigt un passant. Tu sens une boule au ventre."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Aller les voir, un rictus aux lèvres",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Détourner le regard et presser le pas",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 32
+                }
+            ],
+            "x": 2700,
+            "y": 250,
+            "color": "#27AE60"
+        },
+        {
+            "id": 22,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ton collègue de travail insiste : 'Allez, une petite blague, c'est rien.' Son regard appuyé cherche ta complicité."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Rire jaune pour faire comme les autres",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 32
+                },
+                {
+                    "choiceText": "Lui dire que ça ne te fait pas rire",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 33
+                }
+            ],
+            "x": 3000,
+            "y": 250,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 23,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant le supermarché, une voix murmurée : 'Regarde-les, ils ne font même pas l'effort de s'intégrer.' C'est le commerçant du quartier."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Approuver d'un signe de tête",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 33
+                },
+                {
+                    "choiceText": "Répondre que chacun fait ce qu'il peut",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 34
+                }
+            ],
+            "x": 3300,
+            "y": 250,
+            "color": "#E67E22"
+        },
+        {
+            "id": 24,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le jour de l'élection arrive. Les rues sont tendues, les regards se croisent comme des épées. Vous tenez un tract haineux à la main."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Distribuer la propagande en criant vos slogans",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 34
+                },
+                {
+                    "choiceText": "Jeter le tract et rentrer chez vous",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 35
+                }
+            ],
+            "x": 0,
+            "y": 500,
+            "color": "#16A085"
+        },
+        {
+            "id": 25,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Un migrant s'approche de vous en souriant. Il tient un outil de jardinage, inoffensif. Votre main se crispe."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "L'injurier et le menacer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 35
+                },
+                {
+                    "choiceText": "Lui demander son chemin, briser la glace",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 36
+                }
+            ],
+            "x": 300,
+            "y": 500,
+            "color": "#2980B9"
+        },
+        {
+            "id": 26,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Vous êtes au bord de la violence. Un groupe agite des drapeaux. Tout peut basculer."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les rejoindre pour en découdre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 37
+                },
+                {
+                    "choiceText": "Reculer et respirer, fuir le tumulte",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 38
+                }
+            ],
+            "x": 600,
+            "y": 500,
+            "color": "#D35400"
+        },
+        {
+            "id": 27,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Je peux pas croire que t'aies pris la défense de ce type. T'as vu comment il nous regardait?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Il n'a rien fait de mal, tu exagères.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 38
+                },
+                {
+                    "choiceText": "T'as raison, faut pas leur faire confiance.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 39
+                }
+            ],
+            "x": 900,
+            "y": 500,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 28,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La tension monte dans le bar. Les regards se font plus lourds, les silences plus pesants."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Essayer d'apaiser la situation.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 39
+                },
+                {
+                    "choiceText": "Provoquer une confrontation.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 40
+                }
+            ],
+            "x": 1200,
+            "y": 500,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 29,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu vois une famille étrangère qui passe devant toi, les enfants rient, les parents se tiennent la main."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les regarder avec mépris et détourner le regard.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 40
+                },
+                {
+                    "choiceText": "Sourire aux enfants, un élan de douceur.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 41
+                }
+            ],
+            "x": 1500,
+            "y": 500,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 30,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La colère monte. Un mot de trop pourrait tout faire basculer."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Crier et accuser",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 41
+                },
+                {
+                    "choiceText": "Prendre une inspiration et se taire",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 42
+                }
+            ],
+            "x": 1800,
+            "y": 500,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 31,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Un silence lourd s'installe. Le regard de l'autre te transperce."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Rejeter la faute sur lui",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 43
+                },
+                {
+                    "choiceText": "Proposer une trêve",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 44
+                }
+            ],
+            "x": 2100,
+            "y": 500,
+            "color": "#27AE60"
+        },
+        {
+            "id": 32,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule rugit autour de toi. Tu sens le poids du regard des tiens."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre le mouvement et te joindre à la foule",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 44
+                },
+                {
+                    "choiceText": "Reculer et t'éloigner",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 45
+                }
+            ],
+            "x": 2400,
+            "y": 500,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 33,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le doigt de Paul tremble au-dessus de la touche 'Envoyer'. Le message est prêt : une insulte raciale, ciblée, anonyme. Autour de lui, les rires gras de ses collègues résonnent encore. Il peut encore effacer, ou bien lâcher la bombe."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Effacer le message.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 45
+                },
+                {
+                    "choiceText": "Envoyer, pour être accepté.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 46
+                }
+            ],
+            "x": 2700,
+            "y": 500,
+            "color": "#E67E22"
+        },
+        {
+            "id": 34,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Épuisé, Paul erre dans le quartier. Il croise le regard d'une mère qui porte son enfant. Elle est voilée. Dans sa tête, les paroles de son père résonnent : 'Ils nous volent notre culture.' Mais l'enfant sourit."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Détourner le regard et passer son chemin.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 46
+                },
+                {
+                    "choiceText": "S'arrêter et lui tenir la porte.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 47
+                }
+            ],
+            "x": 3000,
+            "y": 500,
+            "color": "#16A085"
+        },
+        {
+            "id": 35,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans le métro bondé, un homme d'origine maghrébine bouscule Paul sans faire exprès. La foule les regarde. Paul sent la colère monter. Une insulte facile lui brûle les lèvres, mais l'homme s'excuse aussitôt, la main tendue."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Accepter les excuses et sourire.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 47
+                },
+                {
+                    "choiceText": "Le pousser et l'insulter.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 48
+                }
+            ],
+            "x": 3300,
+            "y": 500,
+            "color": "#2980B9"
+        },
+        {
+            "id": 36,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le regard de Marc croise celui d'un homme à la peau noire dans le métro. Son cœur s'emballe."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Pourquoi est-ce que je ressens ça ? Ce n'est pas lui, c'est la colère qui parle."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il sent la main de son ami lui serrer l'épaule, un murmure d'encouragement mauvais."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre l'impulsion, se lever et l'insulter.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 48
+                },
+                {
+                    "choiceText": "Rester assis, les poings serrés, mais se taire.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 49
+                }
+            ],
+            "x": 0,
+            "y": 750,
+            "color": "#D35400"
+        },
+        {
+            "id": 37,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le soir tombe, Marc est seul chez lui. Son téléphone vibre : un message du groupe des 'patriotes'."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Ils disent qu'il faut agir, que les étrangers nous volent tout…"
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans le silence de l'appartement, chaque mot résonne comme une vérité."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Répondre au message, proposer son aide.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 50
+                },
+                {
+                    "choiceText": "Éteindre le téléphone, refuser de lire la suite.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 51
+                }
+            ],
+            "x": 300,
+            "y": 750,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 38,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Au supermarché, une famille d'origine maghrébine fait ses courses. Marc les observe."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Caissière",
+                        "value": "Vous avez votre carte de fidélité, monsieur ?"
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il réalise qu'il pourrait faire un scandale, ou simplement continuer sa journée."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Provoquer une altercation, les humilier.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 51
+                },
+                {
+                    "choiceText": "Sourire poliment, payer et partir sans un mot.",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 52
+                }
+            ],
+            "x": 600,
+            "y": 750,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 39,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Le groupe",
+                        "value": "Tu crois vraiment que tu peux leur faire confiance ? Regarde ce qu'ils ont fait à notre quartier."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Ils ont raison, il faut agir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 52
+                },
+                {
+                    "choiceText": "Peut-être que tout n'est pas si simple",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 53
+                }
+            ],
+            "x": 900,
+            "y": 750,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 40,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "L'ami d'enfance",
+                        "value": "Ce n'est pas à cause d'eux que tu as perdu ton boulot. C'est à cause du système."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Le système est truqué contre nous",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 53
+                },
+                {
+                    "choiceText": "Il a raison, je dois réfléchir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 54
+                }
+            ],
+            "x": 1200,
+            "y": 750,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 41,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "La voisine",
+                        "value": "Pourquoi tu les regardes comme ça ? Ils n'ont rien fait de mal."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Ils sont partout, tu ne vois pas ?",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 54
+                },
+                {
+                    "choiceText": "Peut-être que j'ai tort",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 55
+                }
+            ],
+            "x": 1500,
+            "y": 750,
+            "color": "#27AE60"
+        },
+        {
+            "id": 42,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant toi, l’affiche déchirée d’un visage inconnu. Une main anonyme a tagué un symbole de haine à côté. L’air est lourd, chargé d’électricité."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Arracher l’affiche d’un geste brusque",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 55
+                },
+                {
+                    "choiceText": "Prendre une photo, garder une trace",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 56
+                }
+            ],
+            "x": 1800,
+            "y": 750,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 43,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le groupe s’agite. L’un d’eux te tend un marqueur, le regard insistant. 'Allez, marque ton territoire.' La pression monte."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre le marqueur et tracer ton propre signe",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 57
+                },
+                {
+                    "choiceText": "Refuser d’un haussement d’épaules et t’éloigner",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 58
+                }
+            ],
+            "x": 2100,
+            "y": 750,
+            "color": "#E67E22"
+        },
+        {
+            "id": 44,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Une voix s’élève dans la foule : 'C’est à cause d’eux qu’on crève.' Les regards convergent vers toi. Tu sens la colère t’envahir."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Approuver d’un hochement de tête silencieux",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 58
+                },
+                {
+                    "choiceText": "Contredire calmement, risquer l’exclusion",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 59
+                }
+            ],
+            "x": 2400,
+            "y": 750,
+            "color": "#16A085"
+        },
+        {
+            "id": 45,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu tiens le poing serré devant la porte de l'appartement. Derrière, ta mère parle au téléphone, sa voix tremble. Elle sait pour l'altercation au parc. Qu'est-ce que tu vas lui dire ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Mentir, dire que ce n'était rien",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 59
+                },
+                {
+                    "choiceText": "Avouer, craquer sous le poids de la honte",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 60
+                }
+            ],
+            "x": 2700,
+            "y": 750,
+            "color": "#2980B9"
+        },
+        {
+            "id": 46,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le reflet de l'écran de ton téléphone t'aveugle. Les commentaires sur le groupe sont de plus en plus violents : 'Ils volent nos emplois', 'Il faut agir'. Tu sens ton cœur battre plus vite."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Continuer à lire, te laisser emporter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 60
+                },
+                {
+                    "choiceText": "Quitter le groupe, couper cette voix toxique",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 61
+                }
+            ],
+            "x": 3000,
+            "y": 750,
+            "color": "#D35400"
+        },
+        {
+            "id": 47,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule scande des slogans haineux. Un type te met une bouteille vide dans la main. 'Vas-y, lance-la sur leur vitrine !' Tout à l'heure, tu as croisé le regard d'un enfant qui ressemblait à ton petit frère."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lancer la bouteille avec les autres",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 61
+                },
+                {
+                    "choiceText": "Jeter la bouteille à terre et partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 62
+                }
+            ],
+            "x": 3300,
+            "y": 750,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 48,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ses doigts tremblent en tapant le message. Une phrase, deux, trois... Les mots deviennent des lames."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Publier le message rageur",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 62
+                },
+                {
+                    "choiceText": "Effacer et se taire",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 63
+                }
+            ],
+            "x": 0,
+            "y": 1000,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 49,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Face à lui, l'étranger affiche un sourire gêné. Autour, des regards s'échangent."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lui demander son chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 63
+                },
+                {
+                    "choiceText": "L'ignorer et passer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 64
+                }
+            ],
+            "x": 300,
+            "y": 1000,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 50,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La main serrée sur le volant, le klaxon résonne encore. L'autre conducteur gesticule."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Sortir et en découdre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 65
+                },
+                {
+                    "choiceText": "Respirer et laisser couler",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 66
+                }
+            ],
+            "x": 600,
+            "y": 1000,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 51,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Son poing se serre sur le verre. Les murmures autour de lui deviennent slogans."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Se joindre au chœur des insultes",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 66
+                },
+                {
+                    "choiceText": "Rester silencieux, observer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 67
+                }
+            ],
+            "x": 900,
+            "y": 1000,
+            "color": "#27AE60"
+        },
+        {
+            "id": 52,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Une main se pose sur son épaule. Il reconnaît la voix de son ancien professeur."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre le professeur, s'éloigner",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 67
+                },
+                {
+                    "choiceText": "Ignorer, rester avec la foule",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 68
+                }
+            ],
+            "x": 1200,
+            "y": 1000,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 53,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La porte de la salle de réunion claque. Des regards lourds pèsent sur lui."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre la parole, défendre la raison",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 68
+                },
+                {
+                    "choiceText": "Laisser parler son amertume",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 69
+                }
+            ],
+            "x": 1500,
+            "y": 1000,
+            "color": "#E67E22"
+        },
+        {
+            "id": 54,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Lucas",
+                        "value": "Ces étrangers nous prennent tout, tu le sais. Mes parents ont perdu leur commerce à cause d'eux."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Moi",
+                        "value": "Je ne sais pas... ils sont peut-être juste différents."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Approuver en silence pour ne pas créer de conflit",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "ressentiment",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 69
+                },
+                {
+                    "choiceText": "Dire fermement que ce n'est pas une question de race",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Decrease",
+                            "params": {
+                                "attr": "ressentiment",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 70
+                }
+            ],
+            "x": 1800,
+            "y": 1000,
+            "color": "#16A085"
+        },
+        {
+            "id": 55,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Moi",
+                        "value": "Je ne peux pas rester là à ne rien faire. Il faut agir."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Voix intérieure",
+                        "value": "Mais est-ce vraiment la bonne voie ? Tu vas perdre ton humanité."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Rejoindre la manifestation violente",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "radicalisation",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 70
+                },
+                {
+                    "choiceText": "Aller parler à la communauté visée pour comprendre",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "empathie",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 71
+                }
+            ],
+            "x": 2100,
+            "y": 1000,
+            "color": "#2980B9"
+        },
+        {
+            "id": 56,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Père",
+                        "value": "Fils, ne répète pas mes erreurs. La haine ne guérit rien."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Moi",
+                        "value": "Mais comment pardonner tout ce qu'on nous a fait ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre les traces de mon père et pardonner",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Decrease",
+                            "params": {
+                                "attr": "ressentiment",
+                                "value": 2
+                            }
+                        }
+                    ],
+                    "nextNodeId": 71
+                },
+                {
+                    "choiceText": "Me persuader que la vengeance est la seule justice",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "ressentiment",
+                                "value": 2
+                            }
+                        }
+                    ],
+                    "nextNodeId": 72
+                }
+            ],
+            "x": 2400,
+            "y": 1000,
+            "color": "#D35400"
+        },
+        {
+            "id": 57,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Ils ont pris nos jobs, nos maisons... et maintenant ils veulent notre fierté. Tu vois ce que je veux dire, n'est-ce pas ?"
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Le narrateur",
+                        "value": "Sa voix est douce, presque compatissante. Pourtant, chaque mot résonne comme une lame qui creuse plus profond la plaie de ta colère."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Hocher la tête, laisser la rancune parler",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 73
+                },
+                {
+                    "choiceText": "Secouer la tête, chercher une autre voie",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 74
+                }
+            ],
+            "x": 2700,
+            "y": 1000,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 58,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Amélie",
+                        "value": "Tu changes, et pas en bien. Hier, tu as évité mon regard quand j'ai parlé de la diversité au travail. Pourquoi ?"
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Le narrateur",
+                        "value": "Son ton est inquiet, mais derrière, tu sens une accusation. Elle te tend une perche, mais tu n'es pas sûr de vouloir la saisir."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Avouer tes doutes, t'expliquer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 74
+                },
+                {
+                    "choiceText": "Te braquer, nier tout changement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 75
+                }
+            ],
+            "x": 3000,
+            "y": 1000,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 59,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Le narrateur",
+                        "value": "Dans le miroir du hall de l'immeuble, ton reflet te fixe. Les yeux cernés, la mâchoire serrée. Qui est cet homme ? Une rage sourde monte en toi, prête à exploser."
+                    }
+                },
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Voix intérieure",
+                        "value": "Tu peux encore faire marche arrière. Ou alors, laisse-toi emporter par le torrent."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Frapper le miroir, libérer la colère",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 75
+                },
+                {
+                    "choiceText": "Fermer les yeux, respirer, choisir le calme",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 76
+                }
+            ],
+            "x": 3300,
+            "y": 1000,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 60,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Inconnu",
+                        "value": "Tu as du cran, gamin. Mais te mêler de ça, c'est signer ton arrêt de mort. Tu sais qui je suis ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Le défier, le regard planté dans les yeux",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 76
+                },
+                {
+                    "choiceText": "Reculer, une main tremblante sur la poche",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 77
+                }
+            ],
+            "x": 0,
+            "y": 1250,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 61,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule se resserre autour de vous deux. Des murmures excités. Quelqu'un crie : 'Vas-y, montre-lui ce que tu vaux !' Le piège se referme."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Charger, poings serrés",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 77
+                },
+                {
+                    "choiceText": "Lever les mains en signe de paix",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 78
+                }
+            ],
+            "x": 300,
+            "y": 1250,
+            "color": "#27AE60"
+        },
+        {
+            "id": 62,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Une vieille femme sort de la foule et te fixe. Ses yeux sont tristes mais déterminés. 'Ne fais pas ça, mon fils. Tu vas te perdre pour de bon.'"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "L'écouter, baisser la garde",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 78
+                },
+                {
+                    "choiceText": "L'ignorer et foncer dans le tas",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 79
+                }
+            ],
+            "x": 600,
+            "y": 1250,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 63,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu te tiens devant la porte du local. Derrière, des voix étouffées et un rire gras. Ta main hésite sur la poignée."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Entrer et faire face",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 79
+                },
+                {
+                    "choiceText": "Rester dehors, écouter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 80
+                }
+            ],
+            "x": 900,
+            "y": 1250,
+            "color": "#E67E22"
+        },
+        {
+            "id": 64,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans la rue, un groupe de jeunes te frôle. L'un d'eux ricane, l'autre te jette un regard noir. Le sang te monte aux joues."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les confronter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 80
+                },
+                {
+                    "choiceText": "Ignorer et passer ton chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 81
+                }
+            ],
+            "x": 1200,
+            "y": 1250,
+            "color": "#16A085"
+        },
+        {
+            "id": 65,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Au café, Malik vient s'asseoir à ta table. Il te sourit, mais tu sens le poids du regard des autres clients sur vous."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lui dire de partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 82
+                },
+                {
+                    "choiceText": "Accepter sa présence et discuter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 83
+                }
+            ],
+            "x": 1500,
+            "y": 1250,
+            "color": "#2980B9"
+        },
+        {
+            "id": 66,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Les paroles de Jérôme résonnent dans votre tête. Vous repensez à votre patron, qui vous a encore humilié aujourd'hui. La colère monte."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Cracher votre rage sur le premier venu",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Respirer un grand coup et rentrer chez vous",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 84
+                }
+            ],
+            "x": 1800,
+            "y": 1250,
+            "color": "#D35400"
+        },
+        {
+            "id": 67,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Vous croisez un groupe de jeunes d'origine étrangère. L'un d'eux rit fort, et cela vous irrite."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Les insulter",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 84
+                },
+                {
+                    "choiceText": "Passer votre chemin en serrant les poings",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 85
+                }
+            ],
+            "x": 2100,
+            "y": 1250,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 68,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Vous êtes seul dans votre salon. La télévision déverse un flot d'images sur l'immigration. Votre téléphone vibre : un message de votre ami d'enfance, d'origine maghrébine."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lire le message, le cœur lourd",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 85
+                },
+                {
+                    "choiceText": "Effacer la notification sans ouvrir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 86
+                }
+            ],
+            "x": 2400,
+            "y": 1250,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 69,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant toi se dresse un mur de graffitis : des symboles de haine côtoient des appels à la paix. Ta main tremble, une bombe de peinture à la main. Que vas-tu faire ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Ajouter ta signature au mur de la haine",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 86
+                },
+                {
+                    "choiceText": "Recouvrir les symboles par un message de paix",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 87
+                }
+            ],
+            "x": 2700,
+            "y": 1250,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 70,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ta colère gronde. Un groupe raciste t'encourage à passer à l'acte. Mais au fond de toi, une voix plus douce murmure. Que choisis-tu ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre la meute et frapper",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 87
+                },
+                {
+                    "choiceText": "T'éloigner et respirer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 88
+                }
+            ],
+            "x": 3000,
+            "y": 1250,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 71,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu tiens entre tes mains une lettre qui pourrait détruire la réputation d'un innocent. L'encre déteint sur tes doigts. Que décides-tu ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Poster la lettre anonymement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 88
+                },
+                {
+                    "choiceText": "Déchirer la lettre et l'oublier",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 89
+                }
+            ],
+            "x": 3300,
+            "y": 1250,
+            "color": "#27AE60"
+        },
+        {
+            "id": 72,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant le miroir, ton reflet te renvoie un regard que tu ne reconnais pas. Les paroles de tes amis résonnent encore, mais une voix intérieure murmure : et s'ils avaient tort ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Chasser le doute, rester fidèle au groupe",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 89
+                },
+                {
+                    "choiceText": "Écouter cette voix, questionner tes certitudes",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 90
+                }
+            ],
+            "x": 0,
+            "y": 1500,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 73,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans la rue, tu croises un voisin d'origine étrangère. Il te sourit. Une colère froide monte en toi, mais ton poing reste serré."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "L'ignorer et passer ton chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 91
+                },
+                {
+                    "choiceText": "L'insulter à voix basse, pour te soulager",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 92
+                }
+            ],
+            "x": 300,
+            "y": 1500,
+            "color": "#E67E22"
+        },
+        {
+            "id": 74,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ton meilleur ami te confie son histoire : son grand-père a été victime de racisme. Il te regarde, attendant ta réaction."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Compatir et changer de sujet",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 92
+                },
+                {
+                    "choiceText": "Te moquer, disant que c'est du passé",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 93
+                }
+            ],
+            "x": 600,
+            "y": 1500,
+            "color": "#16A085"
+        },
+        {
+            "id": 75,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Thomas fixe l'affiche déchirée du meeting. Son ami lui tend une bière en rigolant : 'Alors, on y va ce soir ?' Il sourit, mais son regard est ailleurs."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Accepter l'invitation, un pas de plus vers la foule",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 93
+                },
+                {
+                    "choiceText": "Refuser, prétextant une fatigue soudaine",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 94
+                }
+            ],
+            "x": 900,
+            "y": 1500,
+            "color": "#2980B9"
+        },
+        {
+            "id": 76,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Sa femme le regarde, les yeux pleins de larmes. 'Tu n'es plus le même, Thomas. Qu'est-ce qui t'arrive ?' Le silence pèse, et il sent la colère monter."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Se confier, avouer ses doutes",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Se refermer, préserver une façade dure",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 95
+                }
+            ],
+            "x": 1200,
+            "y": 1500,
+            "color": "#D35400"
+        },
+        {
+            "id": 77,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Devant la porte du local, il entend des murmures. Un prospectus glissé sous la vitre promet de 'rendre le pays aux vrais travailleurs'. Son poing se serre."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Pousser la porte, entrer dans l'arène",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 95
+                },
+                {
+                    "choiceText": "Déchirer le prospectus, rebrousser chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 96
+                }
+            ],
+            "x": 1500,
+            "y": 1500,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 78,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Face à l'immense portail de la mosquée, la foule bigarrée entre et sort. Le bruit des discussions en arabe, en turc, en ourdou te gifle. Tu sens la main de Karim sur ton épaule : « Viens, je te présente des gens bien. » Une voix intérieure te susurre de tout laisser tomber, de fuir cette tolérance qui te brûle."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Entrer dans la mosquée avec Karim",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 96
+                },
+                {
+                    "choiceText": "Rester dehors, ironique",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 97
+                }
+            ],
+            "x": 1800,
+            "y": 1500,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 79,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le café du quartier, ses odeurs de graisse et de sueur. À une table, trois hommes blancs postés comme des vigiles. L'un d'eux, le crâne rasé, te fixe : « T'es avec nous ou avec eux ? » C'est la ligne, ici. Pas de demi-mesure. Tu jettes un œil vers la mosquée, à deux pas."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "T'asseoir avec les nationalistes",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 97
+                },
+                {
+                    "choiceText": "Ignorer et marcher vers la mosquée",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 98
+                }
+            ],
+            "x": 2100,
+            "y": 1500,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 80,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Sous la lumière blafarde d'un lampadaire, tu tiens le prospectus raciste. Le papier tremble dans ta main. Une jeune fille voilée passe, te frôle presque. Son regard croise le tien, sans peur, presque triste. Autour de toi, le quartier respire, vit, ignore ton dilemme."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Déchirer le prospectus",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 98
+                },
+                {
+                    "choiceText": "Le glisser dans ta poche",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 99
+                }
+            ],
+            "x": 2400,
+            "y": 1500,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 81,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La colère gronde dans la foule. Certains hurlent, d'autres brandissent des poings. Tu sens la pression monter. Une voix crie : 'C'est leur faute !' Le groupe commence à se déplacer, emporté par la fureur. Que fais-tu ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre le mouvement, laisser la colère guider tes pas",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 99
+                },
+                {
+                    "choiceText": "Rester en retrait, observer sans participer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 100
+                }
+            ],
+            "x": 2700,
+            "y": 1500,
+            "color": "#27AE60"
+        },
+        {
+            "id": 82,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Un homme plus âgé s'approche de toi. Ses yeux sont tristes. 'Je sais ce que tu ressens, mais la haine ne résout rien. J'ai perdu un fils dans une bagarre insensée.' Sa voix tremble. Son regard cherche une lueur de raison en toi."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Écouter son histoire, laisser une porte ouverte",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 101
+                },
+                {
+                    "choiceText": "Le repousser, il ne comprend pas ta colère",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 102
+                }
+            ],
+            "x": 3000,
+            "y": 1500,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 83,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu tiens un objet lourd dans ta main. Devant toi, un jeune homme te tourne le dos. Il ne t'a pas vu. Un frisson parcourt ton échine. Ton passé, tes doutes, tout se bouscule. En une seconde, tout peut basculer."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Frapper, il est l'incarnation de tout ce que tu détestes",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 102
+                },
+                {
+                    "choiceText": "Laisser tomber l'objet, tourner le dos et partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 103
+                }
+            ],
+            "x": 3300,
+            "y": 1500,
+            "color": "#E67E22"
+        },
+        {
+            "id": 84,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Son poing se serre. Dans l'ombre du bar, un inconnu lui tend une brochure au titre brûlant. Il hésite, la peur et la colère dansent en lui."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre la brochure",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Refuser et partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 104
+                }
+            ],
+            "x": 0,
+            "y": 1750,
+            "color": "#16A085"
+        },
+        {
+            "id": 85,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La musique s'arrête. Tous les regards convergent vers l'altercation qui éclate. Le videur s'avance, menaçant. Le souffle court, il doit trancher."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "S'interposer pour calmer le jeu",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "S'enfuir par la sortie de secours",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 105
+                }
+            ],
+            "x": 300,
+            "y": 1750,
+            "color": "#2980B9"
+        },
+        {
+            "id": 86,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule scande des slogans haineux. Une main lui tend une pierre. Son cœur cogne. Un enfant, perdu, pleure à l'écart."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lancer la pierre avec rage",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 105
+                },
+                {
+                    "choiceText": "Protéger l'enfant et sortir du rang",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 106
+                }
+            ],
+            "x": 600,
+            "y": 1750,
+            "color": "#D35400"
+        },
+        {
+            "id": 87,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Et si on leur montrait ce qu'on pense vraiment de leur genre ?"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Participer à l'action violente",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 106
+                },
+                {
+                    "choiceText": "Refuser et s'éloigner du groupe",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 107
+                }
+            ],
+            "x": 900,
+            "y": 1750,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 88,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Père de Sofia",
+                        "value": "Vous croyez savoir qui je suis ? Vous ne savez rien de moi."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "L'écouter attentivement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 107
+                },
+                {
+                    "choiceText": "L'insulter et partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 108
+                }
+            ],
+            "x": 1200,
+            "y": 1750,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 89,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La colère bouillonne en toi, mais une petite voix murmure que tout cela pourrait être différent."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre la voie de la haine",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Chercher à comprendre l'autre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 109
+                }
+            ],
+            "x": 1500,
+            "y": 1750,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 90,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le visage de ton frère apparaît sur ton téléphone. Il te supplie d'arrêter avant qu'il ne soit trop tard. Mais dans l'autre pièce, l'appel de la foule se fait plus fort."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Écouter la raison et raccrocher",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 31
+                },
+                {
+                    "choiceText": "Ignorer l'appel et foncer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 110
+                }
+            ],
+            "x": 1800,
+            "y": 1750,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 91,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule se déchaîne. Un inconnu te colle une batte de baseball dans les mains. Tu sens le poids du métal froid. Un type à la peau sombre est à terre, sans défense."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Frapper pour montrer ta loyauté",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 111
+                },
+                {
+                    "choiceText": "Jeter la batte et t'enfuir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 112
+                }
+            ],
+            "x": 2100,
+            "y": 1750,
+            "color": "#27AE60"
+        },
+        {
+            "id": 92,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ton meilleur ami, d'origine maghrébine, se tient devant toi, les yeux pleins de larmes. Il te tend la main. Derrière lui, les insultes fusent."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Prendre sa main et partir",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 112
+                },
+                {
+                    "choiceText": "Le repousser et rejoindre la meute",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 113
+                }
+            ],
+            "x": 2400,
+            "y": 1750,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 93,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Marc",
+                        "value": "Ils ont pris nos emplois, nos chances. Regarde ce qu'ils font de notre quartier."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Hocher la tête en silence",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 113
+                },
+                {
+                    "choiceText": "Protester calmement",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 114
+                }
+            ],
+            "x": 2700,
+            "y": 1750,
+            "color": "#E67E22"
+        },
+        {
+            "id": 94,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Élise",
+                        "value": "Ne fais pas ça. Je sais que tu es meilleur que ça."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "L'écouter, reculer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 114
+                },
+                {
+                    "choiceText": "L'ignorer, avancer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 115
+                }
+            ],
+            "x": 3000,
+            "y": 1750,
+            "color": "#16A085"
+        },
+        {
+            "id": 95,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Inconnu",
+                        "value": "Tu as le choix. La haine ou la paix. Décide maintenant."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Choisir la rage",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 63
+                },
+                {
+                    "choiceText": "Choisir la raison",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 116
+                }
+            ],
+            "x": 3300,
+            "y": 1750,
+            "color": "#2980B9"
+        },
+        {
+            "id": 96,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le groupe d'hommes vous attend, leurs regards chargés d'attentes. L'un d'eux vous tend une batte de baseball, le métal froid luisant sous les lampadaires."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Saisir la batte et les suivre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 116
+                },
+                {
+                    "choiceText": "Refuser et tourner le dos",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 117
+                }
+            ],
+            "x": 0,
+            "y": 2000,
+            "color": "#D35400"
+        },
+        {
+            "id": 97,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Vous vous retrouvez seul dans une ruelle sombre. Un bruit de pas derrière vous : deux hommes s'approchent, l'air menaçant."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Fuir en courant",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 117
+                },
+                {
+                    "choiceText": "Les affronter les poings levés",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 118
+                }
+            ],
+            "x": 300,
+            "y": 2000,
+            "color": "#1ABC9C"
+        },
+        {
+            "id": 98,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Votre téléphone sonne. C'est votre sœur, la voix tremblante. Elle vous supplie de ne pas faire une bêtise, de rentrer à la maison."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Raccrocher et continuer",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 118
+                },
+                {
+                    "choiceText": "Écouter sa voix et rebrousser chemin",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 119
+                }
+            ],
+            "x": 600,
+            "y": 2000,
+            "color": "#9B59B6"
+        },
+        {
+            "id": 99,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Thomas regarde fixement la ligne de crête, là où la ville dort encore. Dans son ventre, une boule de colère et d'incertitude. Un pas, et tout bascule."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Suivre la meute dans l'ombre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 119
+                },
+                {
+                    "choiceText": "Rentrer chez lui, tête baissée",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 120
+                }
+            ],
+            "x": 900,
+            "y": 2000,
+            "color": "#2ECC71"
+        },
+        {
+            "id": 100,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le hall d'entrée de l'immeuble pue l'urine et la haine. Son ami lui tend un poing serré. 'Tu es avec nous ou contre nous ?'"
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Frapper le poing en signe d'alliance",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 63
+                },
+                {
+                    "choiceText": "Refuser et tourner les talons",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 121
+                }
+            ],
+            "x": 1200,
+            "y": 2000,
+            "color": "#4A90D9"
+        },
+        {
+            "id": 101,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La porte de l'appartement claque derrière lui. Sa mère le regarde, les yeux rouges. 'On a reçu une lettre... ton père...' Elle ne termine pas."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Lire la lettre",
+                    "conditions": [],
+                    "actions": [],
+                    "nextNodeId": 122
+                }
+            ],
+            "x": 1500,
+            "y": 2000,
+            "color": "#27AE60"
+        },
+        {
+            "id": 102,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le regard de Paul croise celui d'un homme d'origine maghrébine dans le métro. Un frisson lui parcourt l'échine. Il sent la colère monter, mais une petite voix intérieure lui souffle de ne pas juger trop vite."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Soutenir le regard, provocateur",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "ranceur",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 123
+                }
+            ],
+            "x": 1800,
+            "y": 2000,
+            "color": "#8E44AD"
+        },
+        {
+            "id": 103,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Au bar, ses collègues racontent une blague douteuse sur les immigrés. Tout le monde rit. Paul hésite, une gorgée de bière à la main."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Rire avec eux pour faire comme tout le monde",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Increase",
+                            "params": {
+                                "attr": "ranceur",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 124
+                }
+            ],
+            "x": 2100,
+            "y": 2000,
+            "color": "#E67E22"
+        },
+        {
+            "id": 104,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Son voisin, un couple d'origine syrienne, l'invite à partager un plat typique. L'odeur est alléchante, mais son estomac se serre. Il se souvient des discours de son père."
+                    }
+                }
+            ],
+            "choices": [
+                {
+                    "choiceText": "Accepter l'invitation et goûter au plat",
+                    "conditions": [],
+                    "actions": [
+                        {
+                            "type": "Decrease",
+                            "params": {
+                                "attr": "ranceur",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "nextNodeId": 125
+                }
+            ],
+            "x": 2400,
+            "y": 2000,
+            "color": "#16A085"
+        },
+        {
+            "id": 105,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Alex se tient seul dans la cour de l'immeuble, les poings serrés. Autour de lui, les échos des insultes de la veille résonnent encore. Il ferme les yeux, sentant la colère brûler en lui. Mais une voix intérieure, faible, murmure un autre chemin. Le vide s'installe, lourd de possibilités."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 2700,
+            "y": 2000,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 106,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans l'appartement silencieux, Alex regarde par la fenêtre. Il voit des familles de différentes origines jouer dans le parc. Un voisin croise son regard et lui sourit. Pendant un instant, le monde semble possible, mais une ombre de méfiance traverse son esprit. La rédemption est proche, mais la chute aussi."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 3000,
+            "y": 2000,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 107,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La porte claque derrière lui. Alex a choisi de suivre ses impulsions. Il court dans la rue, son cœur battant la chamade, la haine comme seul guide. Les visages qu'il croise deviennent des cibles. Il sait qu'après cet instant, il n'y aura plus de retour possible. Seule la violence ou la rédemption."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 3300,
+            "y": 2000,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 108,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il serre les poings, les yeux rivés sur la silhouette qui s'éloigne. La colère monte, irrépressible. Tout son être hurle de passer à l'action."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 0,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 109,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il baisse les yeux, honteux. Les mots de sa mère résonnent dans sa tête. Il tourne les talons et s'enfonce dans la nuit, le cœur lourd mais apaisé."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 300,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 110,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il reste figé, incapable de faire un choix. Le temps s'écoule, et la décision lui échappe. Finalement, il baisse la tête et s'éclipse sans un mot."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 600,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 111,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La foule se disperse, laissant place à un silence lourd. Vous réalisez que vos paroles ont franchi une ligne invisible. Il n'y a plus de retour possible."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 900,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 112,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le visage de l'homme que vous avez insulté reste gravé dans votre esprit. Une douleur sourde naît dans votre poitrine. La haine n'a apporté que du vide."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 1200,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 113,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Dans le silence de la nuit, une main se tend vers vous. Vous hésitez, puis l'acceptez. Un chemin différent s'ouvre, fragile mais porteur d'espoir."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 1500,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 114,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Il serre le poing. L'objet est lourd, réel. Mais au fond de lui, une voix d'enfant supplie encore."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 1800,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 115,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Les mots qu'il crache sont des lames. L'autre courbe l'échine. La haine l'emplit, mais la victoire est amère."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 2100,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 116,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La porte claque. Le silence revient. Mais cette fois, il n'est pas vide : il est lourd de regrets."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 2400,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 117,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu regardes tes mains tremblantes, couvertes d'une poussière d'orage. Le silence autour de toi est celui d'un monde qui a perdu son souffle. Une colère froide remplace peu à peu la chaleur de la honte."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 2700,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 118,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu observes la foule qui se disperse, emportant avec elle ses rancunes et ses peurs. Une lueur vacille au loin : une main se tend. Le choix t'appartient désormais."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 3000,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 119,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le miroir brisé reflète mille éclats de toi-même. Dans chaque fragment, une autre voie possible. Mais ici, le chemin s'arrête. La haine a trouvé son repos."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 3300,
+            "y": 2250,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 120,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Le cercueil descend lentement. Une dernière gerbe de roses blanches tombe. Les visages fatigués, le silence lourd. Tu sais que cette fois, il n'y a pas de retour. La haine a gagné, et il n'y a plus rien à sauver."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 0,
+            "y": 2500,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 121,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Ils reculent. Le bruit de la foule s'éteint. Tu lâches la bouteille, les mains tremblantes. Dans le silence, tu entends les battements de ton cœur. Peut-être qu'il est encore temps de reconstruire, de réapprendre à voir l'autre."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 300,
+            "y": 2500,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 122,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu entres dans la salle. Des visages inconnus mais l'espoir dans leurs regards. Tu prends une profonde inspiration. Le chemin sera long, mais pour la première fois, tu tiens la clé de la porte de sortie. Tu n'es plus seul."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 600,
+            "y": 2500,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 123,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "La violence a parlé. Les mots ne suffisent plus. Dans le silence qui suit, tu réalises que le chemin emprunté ne mène nulle part. La haine a consumé tout ce qui te restait d'humanité."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 900,
+            "y": 2500,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 124,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Tu te tiens au bord du précipice, incapable de faire marche arrière. Les mains tremblantes, le regard vide. La rédemption n'est plus qu'un mot, un rêve lointain que tu n'oses plus toucher."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 1200,
+            "y": 2500,
+            "color": "#E74C3C"
+        },
+        {
+            "id": 125,
+            "actions": [
+                {
+                    "type": "ShowDialog",
+                    "params": {
+                        "speaker": "Narrateur",
+                        "value": "Un dernier souffle. Les yeux dans les yeux, tu vois enfin l'autre, non plus comme une menace, mais comme un être de chair et de sang. Trop tard ? Peut-être. Mais dans ce regard, naît une lueur d'espoir."
+                    }
+                }
+            ],
+            "choices": [],
+            "x": 1500,
+            "y": 2500,
+            "color": "#E74C3C"
+        }
+    ],
+    "attributes": [
+        {
+            "label": "Niveau de haine",
+            "type": "Int",
+            "value": "50"
+        },
+        {
+            "label": "Empathie",
+            "type": "Int",
+            "value": "50"
+        },
+        {
+            "label": "Isolement social",
+            "type": "Int",
+            "value": "50"
+        },
+        {
+            "label": "Colère",
+            "type": "Int",
+            "value": "50"
+        }
+    ],
+    "images": [],
+    "videos": [],
+    "sounds": []
+}

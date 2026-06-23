@@ -1,0 +1,51 @@
+HELP.md
+
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+FINAL_RECAP.md
+### VS Code ###
+.vscode/
+
+### Secrets / config locale (NE PAS committer) ###
+.env
+application-local.properties
+**/application-local.properties
+
+### Documentation générée ###
+DYNAMIC_DATATYPES_README.md
+MIGRATION_GUIDE.md
+INSTALLATION_COMPLETE.md
+ATTRIBUTE_DYNAMIC_TYPES.md
+FINAL_SUMMARY.md
+
+# Node / Newman (tests API)
+node_modules/
+package-lock.json
+newman/

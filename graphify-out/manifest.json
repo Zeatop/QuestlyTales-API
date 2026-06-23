@@ -1,0 +1,312 @@
+{
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/.vscode/settings.json": {
+    "mtime": 1778573269.4241512,
+    "ast_hash": "c1d228011df346fb592265221517f7ec",
+    "semantic_hash": "c1d228011df346fb592265221517f7ec"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/mvnw": {
+    "mtime": 1762503266.555171,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": "ab50dd89da7da2346b28003352eeeeeb"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/QuestlyTalesApplication.java": {
+    "mtime": 1762503266.5559628,
+    "ast_hash": "601f9e09369f1ff5eef4008a8461d3a0",
+    "semantic_hash": "601f9e09369f1ff5eef4008a8461d3a0"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/config/AppConfig.java": {
+    "mtime": 1781302125.977487,
+    "ast_hash": "988394b3947c2c185db4e21d7764b652",
+    "semantic_hash": "988394b3947c2c185db4e21d7764b652"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/config/DataTypeConfig.java": {
+    "mtime": 1771407054.3505168,
+    "ast_hash": "eca92ad1c5b33264a30cabba92a21d31",
+    "semantic_hash": "eca92ad1c5b33264a30cabba92a21d31"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/config/MongoConfig.java": {
+    "mtime": 1778573269.4258473,
+    "ast_hash": "81e4ea30b91be96c90f676c80a68a1df",
+    "semantic_hash": "81e4ea30b91be96c90f676c80a68a1df"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/config/SecurityConfig.java": {
+    "mtime": 1781266615.3766687,
+    "ast_hash": "6ef4ed0f86674f2b9c3c0a37337e236a",
+    "semantic_hash": "6ef4ed0f86674f2b9c3c0a37337e236a"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/controllers/DataTypeController.java": {
+    "mtime": 1771408205.8480108,
+    "ast_hash": "a4c253482e0e48436e3a7791ebd96ba3",
+    "semantic_hash": "a4c253482e0e48436e3a7791ebd96ba3"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/controllers/StoryController.java": {
+    "mtime": 1781302276.42764,
+    "ast_hash": "eeab90c202de68120c02427de55058ac",
+    "semantic_hash": "eeab90c202de68120c02427de55058ac"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/controllers/UserController.java": {
+    "mtime": 1778573269.4267685,
+    "ast_hash": "5a10f03d9ec96bdf86219e4a9dca83f9",
+    "semantic_hash": "5a10f03d9ec96bdf86219e4a9dca83f9"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/ActionDTO.java": {
+    "mtime": 1778659678.4835653,
+    "ast_hash": "3ec4e78cd6831faed964d81da78bf198",
+    "semantic_hash": "3ec4e78cd6831faed964d81da78bf198"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/AttributeDTO.java": {
+    "mtime": 1778659851.2045534,
+    "ast_hash": "43a88546e9f28924a4636f79d1e83510",
+    "semantic_hash": "43a88546e9f28924a4636f79d1e83510"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/ChoiceDTO.java": {
+    "mtime": 1778659904.0894094,
+    "ast_hash": "ba4ba0ba41162d98e86fe3b2a51dc181",
+    "semantic_hash": "ba4ba0ba41162d98e86fe3b2a51dc181"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/ConditionDTO.java": {
+    "mtime": 1778659685.1928859,
+    "ast_hash": "d26d79a70a5e8f18e80bedcaa45da122",
+    "semantic_hash": "d26d79a70a5e8f18e80bedcaa45da122"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/GenerateStoryRequestDTO.java": {
+    "mtime": 1778684980.6082203,
+    "ast_hash": "a505553b1e9b04bd4392704a7520028f",
+    "semantic_hash": "a505553b1e9b04bd4392704a7520028f"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storydtos/EditorStoryResponseDTO.java": {
+    "mtime": 1778659974.9339597,
+    "ast_hash": "061e97386bce08fe76143dce81d7f8f9",
+    "semantic_hash": "061e97386bce08fe76143dce81d7f8f9"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storydtos/GameStoryResponseDTO.java": {
+    "mtime": 1781266132.801872,
+    "ast_hash": "78c72482dd5abc043af343abc5b0ba48",
+    "semantic_hash": "78c72482dd5abc043af343abc5b0ba48"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storydtos/StoryMetadataDTO.java": {
+    "mtime": 1778659840.9363465,
+    "ast_hash": "6057b1591e6a9cf12d0b693b663dd363",
+    "semantic_hash": "6057b1591e6a9cf12d0b693b663dd363"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storydtos/StorySubmissionDTO.java": {
+    "mtime": 1778660460.6214926,
+    "ast_hash": "c66a39c507ee85c7cd736437f8d9e269",
+    "semantic_hash": "c66a39c507ee85c7cd736437f8d9e269"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storynodedtos/EditorNodeResponseDTO.java": {
+    "mtime": 1778659915.7936502,
+    "ast_hash": "839564d41dbce4f5824f6afff170adb4",
+    "semantic_hash": "839564d41dbce4f5824f6afff170adb4"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storynodedtos/GameNodeResponseDTO.java": {
+    "mtime": 1778659959.6953907,
+    "ast_hash": "a427db897f3fec65d9e410c6be9726a2",
+    "semantic_hash": "a427db897f3fec65d9e410c6be9726a2"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/userdtos/AuthResponseDTO.java": {
+    "mtime": 1778573269.428163,
+    "ast_hash": "ff663558fca42cac501e7134bad3831c",
+    "semantic_hash": "ff663558fca42cac501e7134bad3831c"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/userdtos/LoginRequestDTO.java": {
+    "mtime": 1778573269.4283078,
+    "ast_hash": "3d43f3d8d9f7757f3fee016135219a77",
+    "semantic_hash": "3d43f3d8d9f7757f3fee016135219a77"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/userdtos/RegisterRequestDTO.java": {
+    "mtime": 1778573269.4284465,
+    "ast_hash": "e55f0a6d4ad10c6287ab29fbea3ff3df",
+    "semantic_hash": "e55f0a6d4ad10c6287ab29fbea3ff3df"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/models/Constraints.java": {
+    "mtime": 1762514221.7464733,
+    "ast_hash": "8a8b2f9861e4723726ac7c0bbf216ee0",
+    "semantic_hash": "8a8b2f9861e4723726ac7c0bbf216ee0"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/models/DynamicDataType.java": {
+    "mtime": 1771407054.3482952,
+    "ast_hash": "24a836f5a3bfeca781cf1919ac3316f6",
+    "semantic_hash": "24a836f5a3bfeca781cf1919ac3316f6"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/models/User.java": {
+    "mtime": 1778573269.4286914,
+    "ast_hash": "348ec652fdb7989da1f90a3efc4279d4",
+    "semantic_hash": "348ec652fdb7989da1f90a3efc4279d4"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/security/JwtAuthFilter.java": {
+    "mtime": 1781266469.7500534,
+    "ast_hash": "8a4f0b7cc097ede7272c2f0e4a8fe714",
+    "semantic_hash": "8a4f0b7cc097ede7272c2f0e4a8fe714"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/ActionRegistry.java": {
+    "mtime": 1778675478.7078564,
+    "ast_hash": "9021f5b5e0aea6da15d4d59042cdd250",
+    "semantic_hash": "9021f5b5e0aea6da15d4d59042cdd250"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/AuthService.java": {
+    "mtime": 1778573269.4290638,
+    "ast_hash": "c02804a3762a0f3ba6b6c972d5953be1",
+    "semantic_hash": "c02804a3762a0f3ba6b6c972d5953be1"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/DataTypeRegistry.java": {
+    "mtime": 1778573269.429339,
+    "ast_hash": "43001cc886b6c44ff7585c11b3a7fff3",
+    "semantic_hash": "43001cc886b6c44ff7585c11b3a7fff3"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/DeepSeekService.java": {
+    "mtime": 1781302152.694273,
+    "ast_hash": "ec53ed3a32710aa604730352cbc652b0",
+    "semantic_hash": "ec53ed3a32710aa604730352cbc652b0"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/JwtService.java": {
+    "mtime": 1781266461.0690227,
+    "ast_hash": "337a0e25d0627e546b85b81133f268be",
+    "semantic_hash": "337a0e25d0627e546b85b81133f268be"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/StoryMongoService.java": {
+    "mtime": 1781266534.755624,
+    "ast_hash": "46387fbf69d797a36b6f2d5b283c9cab",
+    "semantic_hash": "46387fbf69d797a36b6f2d5b283c9cab"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/StoryValidationService.java": {
+    "mtime": 1778660120.2552981,
+    "ast_hash": "34f3e548200ec6824e64ccb61fd8aaf6",
+    "semantic_hash": "34f3e548200ec6824e64ccb61fd8aaf6"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/utils/GithubFileFetcher.java": {
+    "mtime": 1771406480.3636365,
+    "ast_hash": "1a0d22b00faf019e2e1f1b214d0d309f",
+    "semantic_hash": "1a0d22b00faf019e2e1f1b214d0d309f"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/harmonized_success.json": {
+    "mtime": 1778664034.2953818,
+    "ast_hash": "85fdc8a019caff065aaecaee5745a5bb",
+    "semantic_hash": "85fdc8a019caff065aaecaee5745a5bb"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/invalidType.json": {
+    "mtime": 1778660509.478035,
+    "ast_hash": "88c514a5a552adfeedc2182a3e59c1d7",
+    "semantic_hash": "88c514a5a552adfeedc2182a3e59c1d7"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/noNodeId.json": {
+    "mtime": 1778660565.1475608,
+    "ast_hash": "c209f87b6470435b185f2e5fe3d4053f",
+    "semantic_hash": "c209f87b6470435b185f2e5fe3d4053f"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/success.json": {
+    "mtime": 1778684736.268378,
+    "ast_hash": "fdc20c12621f0211351f10fffe15d88c",
+    "semantic_hash": "fdc20c12621f0211351f10fffe15d88c"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/test.json": {
+    "mtime": 1778682096.0669088,
+    "ast_hash": "073da607bb0bb3b0406907186b8ae19d",
+    "semantic_hash": "073da607bb0bb3b0406907186b8ae19d"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/resources/mockData/wrongTargetNode.json": {
+    "mtime": 1778660621.3741767,
+    "ast_hash": "2286dd2f3a157483b731c9df95b39e66",
+    "semantic_hash": "2286dd2f3a157483b731c9df95b39e66"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/test/java/org/tpi/questlytales/QuestlyTalesApplicationTests.java": {
+    "mtime": 1781269048.5648322,
+    "ast_hash": "b34ace7322bc5414292b1ed0605869e7",
+    "semantic_hash": "b34ace7322bc5414292b1ed0605869e7"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/DOCUMENTATION.md": {
+    "mtime": 1778573269.4248013,
+    "ast_hash": "64e5403f3129211206f121405345d911",
+    "semantic_hash": "64e5403f3129211206f121405345d911"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/FINAL_RECAP.md": {
+    "mtime": 1778573269.4249897,
+    "ast_hash": "f353aa8f0d724a94d9789b0e503ccd9b",
+    "semantic_hash": "f353aa8f0d724a94d9789b0e503ccd9b"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/README.md": {
+    "mtime": 1781269533.8640854,
+    "ast_hash": "db744cf59105301caaf9bf343224a210",
+    "semantic_hash": "db744cf59105301caaf9bf343224a210"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/README.md": {
+    "mtime": 1763304895.0032103,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/config/OpenApiConfig.java": {
+    "mtime": 1781269463.4879694,
+    "ast_hash": "3b7f075bdf849b3e5a1d562855137913",
+    "semantic_hash": "3b7f075bdf849b3e5a1d562855137913"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/PagedResponseDTO.java": {
+    "mtime": 1781265854.933781,
+    "ast_hash": "4c390538920bc3dacba6f379a79d64df",
+    "semantic_hash": "4c390538920bc3dacba6f379a79d64df"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/dtos/storydtos/StoryPreviewDTO.java": {
+    "mtime": 1781266506.6072989,
+    "ast_hash": "80b51b5f90f8c88bedc9c5c27e6756c5",
+    "semantic_hash": "80b51b5f90f8c88bedc9c5c27e6756c5"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/security/AuthenticatedUser.java": {
+    "mtime": 1781266452.7154117,
+    "ast_hash": "5cddf6512cde91aea5aae0a2d689f916",
+    "semantic_hash": "5cddf6512cde91aea5aae0a2d689f916"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/test/java/org/tpi/questlytales/services/JwtServiceTest.java": {
+    "mtime": 1781267204.9978125,
+    "ast_hash": "305a02edeb393da1a0b51f45a55d337e",
+    "semantic_hash": "305a02edeb393da1a0b51f45a55d337e"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/test/java/org/tpi/questlytales/services/StoryMongoServiceTest.java": {
+    "mtime": 1781267250.4007146,
+    "ast_hash": "6ff853fa787cc41cdfa53dd4d65d0201",
+    "semantic_hash": "6ff853fa787cc41cdfa53dd4d65d0201"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/test/java/org/tpi/questlytales/services/StoryValidationServiceTest.java": {
+    "mtime": 1781267225.2761033,
+    "ast_hash": "92ac49816c606e37838c11032ec32032",
+    "semantic_hash": "92ac49816c606e37838c11032ec32032"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/docker-compose.yml": {
+    "mtime": 1782049533.15524,
+    "ast_hash": "13b4a54e5838aa55e59b64b8e2bc636c",
+    "semantic_hash": "13b4a54e5838aa55e59b64b8e2bc636c"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/package.json": {
+    "mtime": 1782048124.5728238,
+    "ast_hash": "3982c3a184cc09a4daeb33912ca6d10c",
+    "semantic_hash": "3982c3a184cc09a4daeb33912ca6d10c"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/scripts/story_to_mermaid.py": {
+    "mtime": 1781305139.653498,
+    "ast_hash": "9d483def6849d2a1128942f9897ae52a",
+    "semantic_hash": "9d483def6849d2a1128942f9897ae52a"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/ClaudeStoryService.java": {
+    "mtime": 1782028578.630462,
+    "ast_hash": "47159e18d0f50d9381534600b529ecbc",
+    "semantic_hash": "47159e18d0f50d9381534600b529ecbc"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/src/main/java/org/tpi/questlytales/services/StoryGenerator.java": {
+    "mtime": 1781302133.3239534,
+    "ast_hash": "8926264a437982e091a11e6efe4304b9",
+    "semantic_hash": "8926264a437982e091a11e6efe4304b9"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/tests/local.postman_environment.json": {
+    "mtime": 1782047476.7958841,
+    "ast_hash": "e1f8e1ea6fe82ac6ac0fcf263292af95",
+    "semantic_hash": "e1f8e1ea6fe82ac6ac0fcf263292af95"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/tests/questlytales.postman_collection.json": {
+    "mtime": 1782047460.0357258,
+    "ast_hash": "ce4e1f70a15db912bb314587ad2424f6",
+    "semantic_hash": "ce4e1f70a15db912bb314587ad2424f6"
+  },
+  "/Users/leojackson/Documents/MIAGE/TPI/tpi-questlytales/Backend/QuestlyTales/tests/README.md": {
+    "mtime": 1782048146.841628,
+    "ast_hash": "0bd49891d3411628dbc4bfacaadf1748",
+    "semantic_hash": "0bd49891d3411628dbc4bfacaadf1748"
+  }
+}
