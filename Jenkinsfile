@@ -86,7 +86,7 @@ pipeline {
     }
     post {
         success {
-            echo "Déploiement réussi ! QuestlyTales backend accessible sur le port 30080"
+            echo "Déploiement réussi ! QuestlyTales backend accessible sur le port 31573"
         }
         failure {
             echo "Le pipeline a échoué"
