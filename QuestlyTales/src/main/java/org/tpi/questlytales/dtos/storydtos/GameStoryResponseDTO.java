@@ -7,6 +7,7 @@ import org.tpi.questlytales.dtos.AttributeDTO;
 import org.tpi.questlytales.dtos.storynodedtos.GameNodeResponseDTO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Story téléchargeable pour le jeu.
@@ -23,7 +24,8 @@ public class GameStoryResponseDTO {
     private Integer startNodeId;
     private List<GameNodeResponseDTO> nodes;
     private List<AttributeDTO> playerAttributes;
-    private List<String> images;
+    // Map { nomImage: url } : les noeuds referencent une image par son nom (action changeLocation).
+    private Map<String, String> images;
     private List<String> videos;
     private List<String> sounds;
 }

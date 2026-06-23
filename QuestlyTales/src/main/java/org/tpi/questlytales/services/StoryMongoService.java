@@ -23,7 +23,9 @@ import org.tpi.questlytales.dtos.storynodedtos.GameNodeResponseDTO;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -107,7 +109,7 @@ public class StoryMongoService {
                 .collect(Collectors.toList()));
         }
 
-        response.setImages(story.getList("images", String.class));
+        response.setImages(documentToImages(story.get("images")));
         response.setVideos(story.getList("videos", String.class));
         response.setSounds(story.getList("sounds", String.class));
 
@@ -141,7 +143,7 @@ public class StoryMongoService {
                 .collect(Collectors.toList()));
         }
 
-        response.setImages(story.getList("images", String.class));
+        response.setImages(documentToImages(story.get("images")));
         response.setVideos(story.getList("videos", String.class));
         response.setSounds(story.getList("sounds", String.class));
 
@@ -300,6 +302,29 @@ public class StoryMongoService {
         meta.setSize(doc.getInteger("size"));
         meta.setNumberOfNodes(doc.getInteger("numberOfNodes"));
         return meta;
+    }
+
+    /**
+     * Lit la cle images stockee en base. Format actuel : map { nomImage: url }.
+     * Tolere l'ancien format (tableau de noms) en le convertissant en map { nom: "" }.
+     */
+    @SuppressWarnings("unchecked")
+    private Map<String, String> documentToImages(Object raw) {
+        if (raw instanceof Document doc) {
+            Map<String, String> images = new LinkedHashMap<>();
+            for (Map.Entry<String, Object> entry : doc.entrySet()) {
+                images.put(entry.getKey(), entry.getValue() != null ? entry.getValue().toString() : "");
+            }
+            return images;
+        }
+        if (raw instanceof List<?> list) {
+            Map<String, String> images = new LinkedHashMap<>();
+            for (Object name : list) {
+                if (name != null) images.put(name.toString(), "");
+            }
+            return images;
+        }
+        return new LinkedHashMap<>();
     }
 
     private AttributeDTO documentToAttributeDTO(Document doc) {

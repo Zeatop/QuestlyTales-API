@@ -17,6 +17,11 @@ public class DataTypeConfig {
 
     @Bean
     public DataTypeRegistry dataTypeRegistry() {
+        if (githubToken == null || githubToken.isBlank()) {
+            throw new IllegalStateException(
+                    "github.token manquant : définis la variable d'environnement QUESTLYTALES_GITHUB_TOKEN "
+                            + "(ou github.token dans application-local.properties pour le dev local).");
+        }
         return new DataTypeRegistry(githubToken);
     }
 }

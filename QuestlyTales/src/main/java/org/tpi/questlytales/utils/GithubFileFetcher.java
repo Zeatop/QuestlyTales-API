@@ -1,15 +1,11 @@
 package org.tpi.questlytales.utils;
 
-import java.util.Base64;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.Base64;
 
 public class GithubFileFetcher {
 
@@ -85,5 +81,4 @@ public class GithubFileFetcher {
             throw new RuntimeException("Erreur lors de la récupération des métadonnées: " + e.getMessage(), e);
         }
     }
-
 }
