@@ -57,8 +57,8 @@ pipeline {
                 // variable DOIT correspondre à ce que lit l'appli.
                 JWT_SECRET_QUESTLYTALES        = credentials('JWT_SECRET_QUESTLYTALES')
                 QUESTLYTALES_GITHUB_TOKEN      = credentials('QUESTLYTALES_GITHUB_TOKEN')
-                DEEPSEEK_API_KEY               = credentials('DEEPSEEK_API_KEY_QUESTLYTALES')
-                ANTHROPIC_API_KEY              = credentials('ANTHROPIC_API_KEY_QUESTLYTALES')
+                DEEPSEEK_API_KEY               = credentials('DEEPSEEK_API_KEY')
+                ANTHROPIC_API_KEY              = credentials('ANTHROPIC_API_KEY')
                 MONGO_URI_QUESTLYTALES         = credentials('MONGO_URI_QUESTLYTALES')
                 MONGO_URI_USERS_QUESTLYTALES   = credentials('MONGO_URI_USERS_QUESTLYTALES')
             }
