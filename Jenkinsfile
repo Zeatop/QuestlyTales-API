@@ -60,7 +60,7 @@ pipeline {
                 DEEPSEEK_API_KEY               = credentials('DEEPSEEK_API_KEY')
                 ANTHROPIC_API_KEY              = credentials('ANTHROPIC_API_KEY')
                 MONGO_URI_QUESTLYTALES         = credentials('MONGO_URI_QUESTLYTALES')
-                MONGO_URI_USERS_QUESTLYTALES   = credentials('MONGO_URI_USERS_QUESTLYTALES')
+                MONGO_URI_USERS_QUESTLYTALES   = credentials('MONGO_USERS_URI_QUESTLYTALES')
             }
             steps {
                 // Provisionne / met à jour le Secret K8s à partir des credentials Jenkins.
