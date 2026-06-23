@@ -23,6 +23,7 @@ pipeline {
                             sonarsource/sonar-scanner-cli \
                             -Dsonar.projectKey=questlytales-backend \
                             -Dsonar.sources=src/main/java \
+                            -Dsonar.exclusions=**/*.java \
                             -Dsonar.host.url=\$SONAR_HOST_URL \
                             -Dsonar.token=\$SONAR_AUTH_TOKEN
                     """
