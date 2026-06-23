@@ -4,16 +4,13 @@ pipeline {
         REGISTRY   = '10.0.0.10:5000'
         IMAGE      = 'questlytales-backend'
         TAG        = "${BUILD_NUMBER}"
-        // Chemins relatifs à la racine du repo (monorepo tpi-questlytales)
-        MODULE_DIR = 'Backend/QuestlyTales'        // contexte de build Docker (contient le Dockerfile)
-        K8S_FILE   = 'Backend/k8s/deployment.yaml'
+        // Chemins relatifs à la racine du repo (QuestlyTales-API)
+        MODULE_DIR = 'QuestlyTales'        // contexte de build Docker (contient le Dockerfile)
+        K8S_FILE   = 'k8s/deployment.yaml'
     }
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Master-2-MIAGE-MBDS/tpi-questlytales.git'
-            }
-        }
+        // Pas de stage 'Checkout' explicite : Jenkins clone déjà le repo
+        // configuré dans le job (Declarative: Checkout SCM) sur le bon commit.
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
