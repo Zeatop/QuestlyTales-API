@@ -115,9 +115,9 @@ public class DeepSeekService implements StoryGenerator {
         result.put("metadata", metadata);
         result.put("nodes", filledNodes);
         result.put("attributes", skeleton.getOrDefault("attributes", List.of()));
-        result.put("images", List.of());
-        result.put("videos", List.of());
-        result.put("sounds", List.of());
+        result.put("images", Map.of());
+        result.put("videos", Map.of());
+        result.put("sounds", Map.of());
         return result;
     }
 

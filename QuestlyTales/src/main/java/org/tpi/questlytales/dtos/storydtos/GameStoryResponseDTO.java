@@ -24,8 +24,8 @@ public class GameStoryResponseDTO {
     private Integer startNodeId;
     private List<GameNodeResponseDTO> nodes;
     private List<AttributeDTO> playerAttributes;
-    // Map { nomImage: url } : les noeuds referencent une image par son nom (action changeLocation).
+    // Map { nomMedia: url } : les noeuds referencent un media par son nom (action changeLocation).
     private Map<String, String> images;
-    private List<String> videos;
-    private List<String> sounds;
+    private Map<String, String> videos;
+    private Map<String, String> sounds;
 }

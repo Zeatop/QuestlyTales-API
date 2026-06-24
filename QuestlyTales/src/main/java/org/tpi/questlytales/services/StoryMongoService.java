@@ -109,9 +109,9 @@ public class StoryMongoService {
                 .collect(Collectors.toList()));
         }
 
-        response.setImages(documentToImages(story.get("images")));
-        response.setVideos(story.getList("videos", String.class));
-        response.setSounds(story.getList("sounds", String.class));
+        response.setImages(documentToMediaMap(story.get("images")));
+        response.setVideos(documentToMediaMap(story.get("videos")));
+        response.setSounds(documentToMediaMap(story.get("sounds")));
 
         return response;
     }
@@ -143,9 +143,9 @@ public class StoryMongoService {
                 .collect(Collectors.toList()));
         }
 
-        response.setImages(documentToImages(story.get("images")));
-        response.setVideos(story.getList("videos", String.class));
-        response.setSounds(story.getList("sounds", String.class));
+        response.setImages(documentToMediaMap(story.get("images")));
+        response.setVideos(documentToMediaMap(story.get("videos")));
+        response.setSounds(documentToMediaMap(story.get("sounds")));
 
         return response;
     }
@@ -305,24 +305,24 @@ public class StoryMongoService {
     }
 
     /**
-     * Lit la cle images stockee en base. Format actuel : map { nomImage: url }.
+     * Lit une cle media (images, videos, sounds) stockee en base.
+     * Format actuel : map { nomMedia: url }.
      * Tolere l'ancien format (tableau de noms) en le convertissant en map { nom: "" }.
      */
-    @SuppressWarnings("unchecked")
-    private Map<String, String> documentToImages(Object raw) {
+    private Map<String, String> documentToMediaMap(Object raw) {
         if (raw instanceof Document doc) {
-            Map<String, String> images = new LinkedHashMap<>();
+            Map<String, String> media = new LinkedHashMap<>();
             for (Map.Entry<String, Object> entry : doc.entrySet()) {
-                images.put(entry.getKey(), entry.getValue() != null ? entry.getValue().toString() : "");
+                media.put(entry.getKey(), entry.getValue() != null ? entry.getValue().toString() : "");
             }
-            return images;
+            return media;
         }
         if (raw instanceof List<?> list) {
-            Map<String, String> images = new LinkedHashMap<>();
+            Map<String, String> media = new LinkedHashMap<>();
             for (Object name : list) {
-                if (name != null) images.put(name.toString(), "");
+                if (name != null) media.put(name.toString(), "");
             }
-            return images;
+            return media;
         }
         return new LinkedHashMap<>();
     }
