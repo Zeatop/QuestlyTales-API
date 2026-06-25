@@ -1,11 +1,15 @@
 package org.tpi.questlytales.models;
 
-import lombok.*;
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Document(collection = "users")
 @Data
@@ -15,8 +19,6 @@ import java.util.Date;
 public class User {
     @Id
     private String id;
-    private String nom;
-    private String prenom;
     @Indexed(unique = true)
     private String email;
     private String password;

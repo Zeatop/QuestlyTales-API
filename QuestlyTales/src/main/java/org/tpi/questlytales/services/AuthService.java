@@ -1,5 +1,8 @@
 package org.tpi.questlytales.services;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -14,9 +17,6 @@ import org.tpi.questlytales.dtos.userdtos.AuthResponseDTO;
 import org.tpi.questlytales.dtos.userdtos.LoginRequestDTO;
 import org.tpi.questlytales.dtos.userdtos.RegisterRequestDTO;
 import org.tpi.questlytales.models.User;
-
-import java.util.Date;
-import java.util.List;
 
 @Service
 public class AuthService implements UserDetailsService {
@@ -38,8 +38,6 @@ public class AuthService implements UserDetailsService {
         }
 
         User user = User.builder()
-            .nom(request.getNom())
-            .prenom(request.getPrenom())
             .email(request.getEmail())
             .password(passwordEncoder.encode(request.getPassword()))
             .createdAt(new Date())
