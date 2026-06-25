@@ -1,19 +1,19 @@
 package org.tpi.questlytales.services;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tpi.questlytales.dtos.ActionDTO;
 import org.tpi.questlytales.dtos.AttributeDTO;
 import org.tpi.questlytales.dtos.ChoiceDTO;
 import org.tpi.questlytales.dtos.ConditionDTO;
-import org.tpi.questlytales.dtos.storynodedtos.EditorNodeResponseDTO;
 import org.tpi.questlytales.dtos.storydtos.StorySubmissionDTO;
+import org.tpi.questlytales.dtos.storynodedtos.EditorNodeResponseDTO;
 import org.tpi.questlytales.models.DynamicDataType;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class StoryValidationService {
@@ -94,13 +94,8 @@ public class StoryValidationService {
                 continue;
             }
 
-            if (node.getX() != null && node.getX() < 0) {
-                errors.add(prefix + "La coordonnée X ne peut pas être négative");
-            }
-
-            if (node.getY() != null && node.getY() < 0) {
-                errors.add(prefix + "La coordonnée Y ne peut pas être négative");
-            }
+            // Les coordonnees x/y sont des positions sur le canvas de l'editeur : elles
+            // peuvent legitimement etre negatives (noeud place a gauche/au-dessus de l'origine).
 
             if (node.getActions() != null) {
                 validateActions(node.getActions(), prefix, errors);
